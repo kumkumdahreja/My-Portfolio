@@ -2,20 +2,22 @@
 .services-hero {
     padding: 10rem 0 5rem;
     text-align: center;
-    background: linear-gradient(135deg, rgba(108, 99, 255, 0.1) 0%, rgba(77, 68, 219, 0.1) 100%);
+    /* Solid, vibrant pastel background for the hero */
+    background-color: var(--primary-color);
 }
 
 .services-hero .section-title {
-    color: var(--text-dark);
+    color: var(--text-dark); /* Dark text for title readability on green */
 }
 
 .services-hero .section-title::after {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color); /* Underline with vibrant pink */
 }
 
 /* Development Services */
 .development-services {
     padding: 5rem 0;
+    background-color: var(--light-color); /* Clean white background for service cards */
 }
 
 .services-grid {
@@ -28,23 +30,41 @@
 .service-card {
     padding: 2rem;
     text-align: center;
+    /* Apply the glass card effect with new, more visible parameters */
+    background: var(--glass-bg); /* Nearly opaque white for clarity */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--glass-border); /* Clearer pink border by default */
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border: 1px solid var(--glass-border-hover); /* Vibrant blue border on hover */
 }
 
 .service-icon {
-    font-size: 2.5rem;
-    color: var(--primary-color);
+    font-size: 2.8rem; /* Slightly larger icons for more presence */
+    color: var(--accent-color-purple); /* Icons in vibrant lavender */
     margin-bottom: 1.5rem;
+    /* Adding a subtle, playful background glow to icons */
+    background: radial-gradient(circle at center, rgba(224, 187, 228, 0.2) 0%, transparent 70%); /* Soft lavender glow */
+    padding: 0.5rem;
+    border-radius: 50%;
 }
 
 .service-title {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: var(--text-dark);
+    color: var(--text-dark); /* Dark title for clarity */
 }
 
 .service-description {
     margin-bottom: 1.5rem;
-    color: var(--gray-color);
+    color: var(--gray-color); /* Good contrast for description */
 }
 
 .service-features {
@@ -56,12 +76,12 @@
     margin-bottom: 0.5rem;
     position: relative;
     padding-left: 1.5rem;
-    color: var(--gray-color);
+    color: var(--gray-color); /* Good contrast for list items */
 }
 
 .service-features li::before {
     content: '•';
-    color: var(--primary-color);
+    color: var(--accent-color-orange); /* Bullet points in cheerful orange */
     font-weight: bold;
     position: absolute;
     left: 0;
@@ -70,7 +90,8 @@
 /* Brand Collaboration */
 .brand-collaboration {
     padding: 5rem 0;
-    background: linear-gradient(135deg, rgba(108, 99, 255, 0.1) 0%, rgba(77, 68, 219, 0.1) 100%);
+    /* Solid, distinct vibrant pastel background for this section */
+    background-color: var(--primary-light); /* Lightest pink background */
 }
 
 .collaboration-content {
@@ -78,6 +99,13 @@
     align-items: center;
     padding: 2rem;
     gap: 3rem;
+    /* Apply glass effect to the content container for a unified look */
+    background: var(--glass-bg); /* Nearly opaque white for clarity */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--glass-border); /* Clearer pink border */
+    box-shadow: var(--shadow);
 }
 
 .collab-text {
@@ -87,18 +115,19 @@
 .collab-text h3 {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
-    color: var(--text-dark);
+    color: var(--text-dark); /* Dark title for clarity */
 }
 
 .collab-text p {
     margin-bottom: 1.5rem;
     line-height: 1.8;
+    color: var(--gray-color); /* Good contrast for paragraph text */
 }
 
 .collab-benefits h4 {
     font-size: 1.3rem;
     margin-bottom: 1rem;
-    color: var(--text-dark);
+    color: var(--text-dark); /* Dark heading for benefits */
 }
 
 .collab-benefits ul {
@@ -110,22 +139,22 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: var(--gray-color);
+    color: var(--gray-color); /* Good contrast for list items */
 }
 
 .collab-benefits i {
-    color: var(--primary-color);
+    color: var(--primary-color); /* Benefit icons in vibrant pink */
 }
 
 .collab-types h4 {
     font-size: 1.3rem;
     margin-bottom: 1rem;
-    color: var(--text-dark);
+    color: var(--text-dark); /* Dark heading for collaboration types */
 }
 
 .types-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 1rem;
     margin-bottom: 2rem;
 }
@@ -136,34 +165,109 @@
     align-items: center;
     gap: 0.5rem;
     padding: 1rem;
-    background-color: rgba(108, 99, 255, 0.1);
+    /* Playful, varied pastel backgrounds for collaboration types */
+    background-color: var(--accent-color-yellow); /* Cheerful yellow for type items */
+    color: var(--text-dark); /* Dark text on light background */
     border-radius: var(--border-radius);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: var(--transition);
+}
+
+/* Alternate type item colors for more vibrancy */
+.type-item:nth-child(2n) {
+    background-color: var(--accent-color-blue); /* Sky blue alternate */
+}
+
+.type-item:nth-child(3n) {
+    background-color: var(--accent-color-purple); /* Lavender alternate */
+}
+.type-item:nth-child(4n) {
+    background-color: var(--accent-color-green); /* Mint green alternate */
+}
+
+
+.type-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
 }
 
 .type-item i {
-    font-size: 1.5rem;
-    color: var(--primary-color);
+    font-size: 1.8rem; /* Slightly larger icons for types */
+    color: var(--primary-color); /* Icons in vibrant pink */
 }
 
 .type-item span {
     font-size: 0.9rem;
     text-align: center;
+    font-weight: 500;
 }
 
 .social-platforms {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     margin-top: 2rem;
 }
 
+/* Social platform links as cute pastel buttons */
+.social-platforms a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.2rem;
+    border-radius: 25px; /* More rounded for cute button look */
+    background-color: var(--accent-color-blue); /* Soft blue button */
+    color: var(--text-dark); /* Dark text for readability */
+    font-weight: 600;
+    transition: var(--transition);
+    box-shadow: 0 4px 10px rgba(173, 216, 230, 0.4);
+}
+
+.social-platforms a:hover {
+    background-color: var(--primary-color); /* Hover to vibrant pink */
+    color: var(--text-light); /* White text on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(255, 192, 203, 0.6);
+}
+
+.social-platforms a i {
+    font-size: 1.1rem;
+    color: var(--text-dark); /* Icon color matches text for consistency */
+    transition: var(--transition);
+}
+
+.social-platforms a:hover i {
+    color: var(--text-light); /* Icon becomes white on hover */
+}
+
 .collab-image {
     flex: 1;
+    /* Creative styling for the collaboration image with a vibrant, solid border */
+    position: relative;
+    padding: 1.5rem; /* Padding to create space for the decorative border */
+    background-color: var(--accent-color-yellow); /* Solid vibrant yellow border effect */
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-hover); /* More prominent shadow for the image */
+}
+
+.collab-image::before { /* Decorative inner border/frame */
+    content: '';
+    position: absolute;
+    inset: 5px; /* Controls the thickness of the inner border */
+    background: var(--light-color); /* White background inside the frame */
+    border-radius: calc(var(--border-radius) - 5px); /* Slightly smaller inner border radius */
+    z-index: 1;
 }
 
 .collab-image img {
     width: 100%;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
+    height: 350px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensures image covers the area nicely */
+    border-radius: calc(var(--border-radius) - 5px); /* Match inner border radius */
+    position: relative;
+    z-index: 2; /* Ensures image is on top of the 'before' pseudo-element */
+    display: block; /* Remove extra space below image */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Soft shadow on the image itself */
 }
 
 /* Responsive Styles */
@@ -185,5 +289,10 @@
     
     .social-platforms {
         flex-direction: column;
+        align-items: center; /* Center buttons when stacked */
+    }
+
+    .types-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust minmax for smaller screens */
     }
 }

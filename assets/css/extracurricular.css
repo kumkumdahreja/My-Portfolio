@@ -2,20 +2,25 @@
 .extracurricular-hero {
     padding: 10rem 0 5rem;
     text-align: center;
-    background: linear-gradient(135deg, rgba(108, 99, 255, 0.1) 0%, rgba(77, 68, 219, 0.1) 100%);
+    /* REVISED: Solid, subtle pastel background for Hero */
+    background-color: var(--light-secondary); /* A very light, subtle off-white */
 }
 
 .extracurricular-hero .section-title {
+    /* Retained: Use dark text */
     color: var(--text-dark);
 }
 
 .extracurricular-hero .section-title::after {
+    /* Retained: Use primary color for accent line */
     background-color: var(--primary-color);
 }
 
 /* Leadership Section */
 .leadership-section {
     padding: 5rem 0;
+    /* REVISED: Subtle background for Leadership section */
+    background-color: var(--light-color); /* A very subtle, almost white color */
 }
 
 .roles-grid {
@@ -28,7 +33,20 @@
 .role-card {
     display: flex;
     flex-direction: column;
+    /* REVISED: Add background, shadow, border, and transition for card effect */
+    background: var(--light-color); /* Light background for cards */
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border: var(--glass-border); /* Subtle border for definition */
 }
+
+.role-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border: var(--glass-border-hover); /* Subtle border change on hover */
+}
+
 
 .role-header {
     padding: 1.5rem 1.5rem 0;
@@ -73,7 +91,8 @@
 
 .role-responsibilities li::before {
     content: '•';
-    color: var(--primary-color);
+    /* REVISED: Use accent color for list bullets */
+    color: var(--accent-color-orange);
     font-weight: bold;
     position: absolute;
     left: 0;
@@ -87,14 +106,17 @@
     width: 100%;
     height: 300px;
     border-radius: var(--border-radius);
+    /* REVISED: Use shadow variable */
     box-shadow: var(--shadow);
+    object-fit: cover; /* Ensure image covers the area nicely */
 }
 
 
 /* Events Section */
 .events-section {
     padding: 5rem 0;
-    background-color: var(--pastel-lavender);
+    /* REVISED: Subtle background for Events section (timeline) */
+    background-color: var(--light-secondary); /* A very light, subtle off-white */
 }
 
 .events-timeline {
@@ -111,9 +133,8 @@
     left: 50px;
     width: 3px;
     height: 100%;
-    background: linear-gradient(to bottom, 
-        var(--accent-color), 
-        var(--primary-color));
+    /* REVISED: Solid primary color for timeline line, no gradient */
+    background-color: var(--primary-color);
 }
 
 .event-item {
@@ -128,19 +149,30 @@
     left: 0;
     width: 100px;
     padding: 0.5rem 1rem;
-    background-color: var(--accent-color);
-    color: white;
+    /* REVISED: Use specific accent color for date background */
+    background-color: var(--accent-color-blue);
+    /* REVISED: Use light color for text */
+    color: var(--light-color);
     border-radius: 20px;
     font-weight: 600;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(255, 183, 183, 0.3);
+    /* REVISED: Use shadow variable */
+    box-shadow: var(--shadow);
 }
 
 .event-content {
-    background: white;
+    /* REVISED: Use light color for background */
+    background: var(--light-color);
     padding: 1.5rem;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    /* REVISED: Use shadow variable */
+    box-shadow: var(--shadow);
+    transition: var(--transition); /* Add transition for hover effect */
+}
+
+.event-content:hover {
+    transform: translateY(-5px); /* Add hover effect for cards */
+    box-shadow: var(--shadow-hover);
 }
 
 .event-title {
@@ -166,7 +198,10 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    background-color: rgba(161, 198, 234, 0.2);
+    /* REVISED: Use a lighter primary color for background */
+    background-color: var(--primary-light);
+    /* REVISED: Ensure text is visible on the highlight background */
+    color: var(--text-dark);
     padding: 0.5rem 1.2rem;
     border-radius: 20px;
     font-size: 0.9rem;
@@ -183,7 +218,9 @@
 .event-image img {
     width: 100%;
     border-radius: var(--border-radius);
+    /* REVISED: Use shadow variable */
     box-shadow: var(--shadow);
+    object-fit: cover; /* Ensure image covers the area nicely */
 }
 
 /* Responsive Styles */

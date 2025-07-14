@@ -2,21 +2,25 @@
 .resume-hero {
     padding: 10rem 0 5rem;
     text-align: center;
-    background: linear-gradient(135deg, rgba(108, 99, 255, 0.1) 0%, rgba(77, 68, 219, 0.1) 100%);
+    /* Retained: Solid, subtle background for resume hero */
+    background-color: var(--light-secondary); /* A very light, subtle off-white */
 }
 
 .resume-hero .section-title {
+    /* Retained: Use dark text */
     color: var(--text-dark);
 }
 
 .resume-hero .section-title::after {
+    /* Retained: Use primary color for accent line */
     background-color: var(--primary-color);
 }
 
 /* Experience Section */
 .experience-section {
     padding: 5rem 0;
-    background-color: var(--pastel-lavender);
+    /* Retained: Settle down background for experience section - very subtle */
+    background-color: var(--light-color); /* A very subtle, almost white color */
 }
 
 .section-actions {
@@ -37,9 +41,8 @@
     left: 50px;
     width: 3px;
     height: 100%;
-    background: linear-gradient(to bottom, 
-        var(--accent-color), 
-        var(--primary-color));
+    /* Retained: Solid primary color for timeline line - serves as a good accent */
+    background-color: var(--primary-color);
 }
 
 .timeline-item {
@@ -54,35 +57,43 @@
     left: 0;
     width: 100px;
     padding: 0.5rem 1rem;
-    background-color: var(--accent-color);
-    color: white;
+    /* Retained: Accent color blue for date background */
+    background-color: var(--accent-color-blue);
+    /* Retained: White text for contrast on accent color */
+    color: var(--light-color);
     border-radius: 20px;
     font-weight: 600;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(255, 183, 183, 0.3);
+    /* Retained: Shadow using primary light with more opacity */
+    box-shadow: 0 4px 15px var(--shadow);
 }
 
 .timeline-content {
-    background: white;
+    /* Retained: Light background for content card */
+    background: var(--light-color);
     padding: 1.5rem;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    /* Retained: Shadow using primary light with more opacity */
+    box-shadow: var(--shadow);
     transition: var(--transition);
 }
 
 .timeline-content:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    /* Retained: Hover shadow using primary light with more opacity */
+    box-shadow: var(--shadow-hover);
 }
 
 .timeline-title {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
+    /* Retained: Use dark text */
     color: var(--text-dark);
 }
 
 .timeline-company {
     font-size: 1.1rem;
+    /* Retained: Use primary color for company name - good accent */
     color: var(--primary-color);
     margin-bottom: 1rem;
     font-weight: 600;
@@ -95,13 +106,15 @@
 .timeline-description li {
     margin-bottom: 0.8rem;
     position: relative;
+    /* Retained: Use gray color for description text */
     color: var(--gray-color);
     line-height: 1.7;
 }
 
 .timeline-description li::before {
     content: '•';
-    color: var(--primary-color);
+    /* Retained: Use accent color orange for list bullets - good pop */
+    color: var(--accent-color-orange);
     font-weight: bold;
     position: absolute;
     left: -1.5rem;
@@ -110,7 +123,8 @@
 /* Education Section */
 .education-section {
     padding: 5rem 0;
-    background: linear-gradient(135deg, rgba(108, 99, 255, 0.1) 0%, rgba(77, 68, 219, 0.1) 100%);
+    /* Retained: Pretty good vibrant background for education section */
+    background-color: var(--accent-color-yellow); /* Sunny pastel yellow */
 }
 
 .education-grid {
@@ -121,32 +135,38 @@
 }
 
 .education-card {
-    background: white;
+    /* Retained: Light background for education card */
+    background: var(--light-color);
     padding: 1.5rem;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    /* Retained: Shadow using primary light with more opacity */
+    box-shadow: var(--shadow);
     transition: var(--transition);
 }
 
 .education-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    /* Retained: Hover shadow using primary light with more opacity */
+    box-shadow: var(--shadow-hover);
 }
 
 .education-title {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
+    /* Retained: Use dark text */
     color: var(--text-dark);
 }
 
 .education-institution {
     font-size: 1.1rem;
+    /* Retained: Use primary color for institution name */
     color: var(--primary-color);
     margin-bottom: 0.5rem;
     font-weight: 600;
 }
 
 .education-duration {
+    /* Retained: Use gray color for duration text */
     color: var(--gray-color);
     font-size: 0.9rem;
     margin-bottom: 1rem;
@@ -156,16 +176,10 @@
     padding-left: 1.5rem;
 }
 
-.education-description li {
-    margin-bottom: 0.8rem;
-    position: relative;
-    color: var(--gray-color);
-    line-height: 1.7;
-}
-
 .education-description li::before {
     content: '•';
-    color: var(--primary-color);
+    /* Retained: Use accent color blue for list bullets - good pop */
+    color: var(--accent-color-blue);
     font-weight: bold;
     position: absolute;
     left: -1.5rem;
@@ -174,7 +188,8 @@
 /* Certificates Section */
 .certificates-section {
     padding: 5rem 0;
-    background-color: var(--pastel-lavender);
+    /* Retained: Pretty good vibrant background for certificates section */
+    background-color: var(--accent-color-purple); /* Cheerful lavender */
 }
 
 .certificates-grid {
@@ -185,31 +200,37 @@
 }
 
 .certificate-card {
-    background: white;
+    /* Retained: Light background for certificate card */
+    background: var(--light-color);
     padding: 1.5rem;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    /* Retained: Shadow using primary light with more opacity */
+    box-shadow: var(--shadow);
     transition: var(--transition);
 }
 
 .certificate-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    /* Retained: Hover shadow using primary light with more opacity */
+    box-shadow: var(--shadow-hover);
 }
 
 .certificate-title {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
+    /* Retained: Use dark text */
     color: var(--text-dark);
 }
 
 .certificate-issuer {
+    /* Retained: Use primary color for issuer name */
     color: var(--primary-color);
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
 
 .certificate-date {
+    /* Retained: Use gray color for date text */
     color: var(--gray-color);
     font-size: 0.9rem;
 }
@@ -217,7 +238,8 @@
 /* Skills Section */
 .skills-section {
     padding: 5rem 0;
-    background: linear-gradient(135deg, rgba(108, 99, 255, 0.1) 0%, rgba(77, 68, 219, 0.1) 100%);
+    /* Retained: Pretty good vibrant background for skills section */
+    background-color: var(--primary-light); /* Lightest pink */
 }
 
 .skills-categories {
@@ -228,21 +250,25 @@
 }
 
 .skills-category {
-    background: white;
+    /* Retained: Light background for skills category card */
+    background: var(--light-color);
     padding: 1.5rem;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    /* Retained: Shadow using primary light with more opacity */
+    box-shadow: var(--shadow);
     transition: var(--transition);
 }
 
 .skills-category:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    /* Retained: Hover shadow using primary light with more opacity */
+    box-shadow: var(--shadow-hover);
 }
 
 .category-title {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
+    /* Retained: Use dark text */
     color: var(--text-dark);
     position: relative;
     padding-bottom: 10px;
@@ -255,7 +281,8 @@
     left: 0;
     width: 50px;
     height: 3px;
-    background-color: var(--primary-color);
+    /* Retained: Use accent color green for category title accent line */
+    background-color: var(--accent-color-green);
 }
 
 .skills-list {
@@ -264,24 +291,34 @@
     gap: 0.8rem;
 }
 
+/* REVISED: Text color for skill buttons changed for visibility */
 .skills-list li {
-    background-color: var(--primary-light);
-    color: white;
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.9rem;
+    /* Updated: Use dark text for contrast on all vibrant backgrounds */
+    color: var(--text-dark);
+    transition: background-color 0.3s ease; /* Smooth transition for color change */
 }
+
+.skills-list li:nth-child(6n + 1) { background-color: var(--primary-color); } /* Pink */
+.skills-list li:nth-child(6n + 2) { background-color: var(--accent-color-blue); } /* Light Blue */
+.skills-list li:nth-child(6n + 3) { background-color: var(--accent-color-green); } /* Mint Green */
+.skills-list li:nth-child(6n + 4) { background-color: var(--accent-color-purple); } /* Lavender */
+.skills-list li:nth-child(6n + 5) { background-color: var(--accent-color-orange); } /* Peach/Orange */
+.skills-list li:nth-child(6n + 0) { background-color: var(--accent-color-yellow); } /* Yellow */
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
     .timeline::before {
         left: 30px;
     }
-    
+
     .timeline-item {
         padding-left: 60px;
     }
-    
+
     .timeline-date {
         width: 80px;
     }
@@ -291,15 +328,15 @@
     .resume-hero {
         padding: 8rem 0 3rem;
     }
-    
+
     .timeline::before {
         left: 15px;
     }
-    
+
     .timeline-item {
         padding-left: 45px;
     }
-    
+
     .timeline-date {
         width: 60px;
         font-size: 0.8rem;

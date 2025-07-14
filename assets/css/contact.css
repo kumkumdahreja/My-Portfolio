@@ -2,7 +2,8 @@
 .contact-hero {
     padding: 10rem 0 3rem;
     text-align: center;
-    background: linear-gradient(135deg, rgba(108, 99, 255, 0.1) 0%, rgba(77, 68, 219, 0.1) 100%);
+    /* REVISED: Solid, subtle pastel background for Hero */
+    background-color: var(--light-color); /* Very subtle, almost white */
 }
 
 .contact-hero .section-title {
@@ -13,9 +14,11 @@
     background-color: var(--primary-color);
 }
 
-/* Contact Cards */
+/* Contact Cards Section */
 .contact-cards {
     padding: 3rem 0;
+    /* REVISED: Add a subtle background to the section */
+    background-color: var(--light-secondary); /* A light, subtle off-white */
 }
 
 .cards-grid {
@@ -28,16 +31,24 @@
     padding: 2rem;
     text-align: center;
     transition: var(--transition);
+    /* REVISED: Add card styling */
+    background: var(--light-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    border: var(--glass-border); /* Subtle border for definition */
 }
 
 .contact-card:hover {
     transform: translateY(-5px);
+    box-shadow: var(--shadow-hover); /* Enhanced shadow on hover */
+    border: var(--glass-border-hover); /* Subtle border change on hover */
 }
 
 .card-icon {
     width: 60px;
     height: 60px;
-    background-color: rgba(108, 99, 255, 0.1);
+    /* REVISED: Use transparent pastel from palette */
+    background-color: rgba(var(--primary-color-rgb), 0.1); /* Light transparent pink */
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -72,7 +83,8 @@
 .social-icon {
     width: 40px;
     height: 40px;
-    background-color: rgba(108, 99, 255, 0.1);
+    /* REVISED: Use transparent pastel from palette */
+    background-color: rgba(var(--accent-color-blue-rgb), 0.1); /* Light transparent blue */
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -82,18 +94,24 @@
 }
 
 .social-icon:hover {
-    background-color: var(--primary-color);
-    color: white;
+    background-color: var(--primary-color); /* Solid primary on hover */
+    color: var(--light-color); /* White text on hover */
 }
 
 /* Form Section */
 .form-section {
     padding: 3rem 0 5rem;
+    /* REVISED: Add a distinct but subtle background to the section */
+    background-color: var(--primary-light); /* Lightest pink */
 }
 
 .form-container {
     padding: 2rem;
     border-radius: var(--border-radius);
+    /* REVISED: Add card styling for the form container */
+    background: var(--light-color);
+    box-shadow: var(--shadow);
+    border: var(--glass-border); /* Subtle border for definition */
 }
 
 .form-container .section-title {
@@ -108,8 +126,8 @@
 
 /* Footer */
 .footer {
-    background-color: var(--dark-secondary);
-    color: var(--text-light);
+    background-color: var(--dark-secondary); /* Retained: Dark background */
+    color: var(--text-light); /* Retained: Light text */
     padding: 4rem 0 2rem;
 }
 
@@ -127,7 +145,7 @@
 }
 
 .footer-brand p {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.7); /* Retained: Semi-transparent white for body text */
 }
 
 .footer-nav ul {
@@ -138,12 +156,12 @@
 }
 
 .footer-nav ul li a {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.7); /* Retained: Semi-transparent white for links */
     transition: var(--transition);
 }
 
 .footer-nav ul li a:hover {
-    color: var(--primary-light);
+    color: var(--primary-light); /* Retained: Primary light on hover */
 }
 
 .footer-social {
@@ -153,21 +171,21 @@
 }
 
 .footer-social a {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.7); /* Retained: Semi-transparent white for icons */
     font-size: 1.5rem;
     transition: var(--transition);
 }
 
 .footer-social a:hover {
-    color: var(--primary-light);
+    color: var(--primary-light); /* Retained: Primary light on hover */
     transform: translateY(-3px);
 }
 
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.7);
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Retained: Subtle white border */
+    color: rgba(255, 255, 255, 0.7); /* Retained: Semi-transparent white for copyright */
     font-size: 0.9rem;
 }
 
