@@ -59,6 +59,8 @@ body {
     line-height: 1.6;
     background-color: var(--light-color);
     transition: var(--transition);
+    /* RESPONSIVE: Ensure no horizontal scrollbar by default */
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -66,11 +68,17 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
     margin-bottom: 1rem;
     color: var(--text-dark);
+    /* RESPONSIVE: Ensure text wraps and doesn't overflow */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 p {
     margin-bottom: 1rem;
     color: var(--gray-color);
+    /* RESPONSIVE: Ensure text wraps and doesn't overflow */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 a {
@@ -97,7 +105,8 @@ ul {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    /* RESPONSIVE: Adjusted padding for better responsiveness on smaller screens */
+    padding: 0 1rem; /* Reduced default padding for tighter fit on mobile */
 }
 
 /* Buttons */
@@ -112,6 +121,11 @@ ul {
     border: none;
     font-family: var(--font-primary);
     box-shadow: var(--shadow); /* Apply default shadow to all buttons */
+    /* RESPONSIVE: Ensure buttons adapt to smaller widths */
+    max-width: 100%;
+    white-space: nowrap; /* Prevent text wrapping within button */
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .btn-primary {
@@ -173,6 +187,11 @@ ul {
     position: relative;
     display: inline-block;
     color: var(--text-dark); /* Ensure dark text */
+    /* RESPONSIVE: Ensure title wraps on smaller screens */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding: 0 0.5rem; /* Add some horizontal padding to prevent overflow */
+    max-width: 95%; /* Limit width to prevent overflow */
 }
 
 .section-title::after {
@@ -192,6 +211,10 @@ ul {
     color: var(--gray-color);
     max-width: 700px;
     margin: 0 auto;
+    /* RESPONSIVE: Ensure subtitle wraps on smaller screens */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding: 0 1rem; /* Add some horizontal padding */
 }
 
 /* Glass Card Effect Variables (No longer a class, but variables for direct use) */
@@ -205,6 +228,10 @@ ul {
     border: var(--glass-border);
     box-shadow: var(--shadow);
     transition: var(--transition);
+    /* RESPONSIVE: Ensure glass cards are responsive */
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 .glass-card:hover {
@@ -235,6 +262,7 @@ ul {
     box-shadow: var(--shadow); /* Soft pink shadow */
     padding: 1rem 0; /* Default padding */
     transition: var(--transition);
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 .header.scrolled {
@@ -246,19 +274,28 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* RESPONSIVE: Ensure container padding is consistent */
+    padding: 0 1rem;
 }
 
 .logo {
     font-size: 2rem; /* Slightly larger logo */
     font-weight: 700;
     color: var(--primary-color); /* Vibrant pink for the logo */
-    margin-right: 1.5rem; /* Space between logo and nav on desktop */
+    /* RESPONSIVE: Adjusted margin for smaller screens */
+    margin-right: 1rem; /* Reduced margin for tighter fit */
+    /* RESPONSIVE: Ensure logo text wraps if necessary */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .nav ul {
     display: flex;
     gap: 2.5rem; /* More space between nav items */
     align-items: center; /* Vertically align nav items */
+    /* RESPONSIVE: Ensure nav items don't overflow */
+    flex-wrap: nowrap; /* Prevent wrapping on desktop, handled by mobile menu */
 }
 
 .nav ul li a {
@@ -266,6 +303,10 @@ ul {
     font-weight: 600;
     position: relative;
     padding: 0.5rem 0; /* Add padding for clickable area */
+    /* RESPONSIVE: Ensure text wraps if needed */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .nav ul li a::after {
@@ -291,7 +332,7 @@ ul {
 }
 
 .hire-me-btn {
-    /* REVISED: Make the button more spacious and slightly larger text */
+    /* REVISED: Ensure button is spacious and text is visible */
     background-color: var(--primary-color); /* Vibrant Pink */
     color: var(--text-light); /* White text */
     padding: 1.2rem 3rem; /* Increased padding for spaciousness */
@@ -303,6 +344,12 @@ ul {
     border: none;
     font-family: var(--font-primary);
     box-shadow: var(--shadow); /* Apply default shadow */
+    /* RESPONSIVE: Ensure button adapts and doesn't overflow */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block; /* Ensure it behaves like a block for padding/sizing */
+    text-align: center; /* Center text within the button */
 }
 
 .hire-me-btn:hover {
@@ -328,6 +375,7 @@ ul {
     background-color: var(--dark-secondary); /* Retained: Dark background */
     color: var(--text-light); /* Retained: Light text */
     padding: 4rem 0 2rem;
+    box-sizing: border-box; /* RESPONSIVE: Include padding in total width */
 }
 
 .footer-content {
@@ -335,21 +383,28 @@ ul {
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
     margin-bottom: 3rem;
+    /* RESPONSIVE: Ensure footer content adapts */
+    padding: 0 1rem; /* Add padding for smaller screens */
 }
 
 .footer-brand h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     color: var(--text-light);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .footer-brand p {
     color: rgba(255, 255, 255, 0.7); /* Retained: Semi-transparent white for body text */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .footer-nav ul {
     display: flex;
-    flex-wrap: wrap;
+    /* RESPONSIVE: Allow wrapping for better responsiveness */
+    flex-wrap: wrap;    
     gap: 1.5rem;
     justify-content: center;
 }
@@ -357,6 +412,9 @@ ul {
 .footer-nav ul li a {
     color: rgba(255, 255, 255, 0.7); /* Retained: Semi-transparent white for links */
     transition: var(--transition);
+    white-space: nowrap; /* Prevent wrapping within nav items */
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .footer-nav ul li a:hover {
@@ -366,7 +424,8 @@ ul {
 .footer-social {
     display: flex;
     gap: 1.5rem;
-    justify-content: flex-end;
+    /* FIX: Ensure footer social icons are centered on all screen sizes */
+    justify-content: center; 
 }
 
 .footer-social a {
@@ -386,6 +445,10 @@ ul {
     border-top: 1px solid rgba(255, 255, 255, 0.1); /* Retained: Subtle white border */
     color: rgba(255, 255, 255, 0.7); /* Retained: Semi-transparent white for copyright */
     font-size: 0.9rem;
+    padding-left: 1rem; /* RESPONSIVE: Ensure padding on sides */
+    padding-right: 1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 /* Responsive Styles */
@@ -405,6 +468,18 @@ ul {
 
     .section-title {
         font-size: 2.2rem;
+    }
+
+    /* RESPONSIVE: Ensure container padding is adjusted for tablets */
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    /* Adjust grid for footer on smaller desktops/large tablets */
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
     }
 }
 
@@ -426,6 +501,9 @@ ul {
         transition: left 0.4s ease-in-out; /* Smooth slide transition */
         z-index: 999;
         box-shadow: var(--shadow-hover); /* Add shadow to mobile menu */
+        /* RESPONSIVE: Ensure mobile nav content is scrollable if needed */
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .nav.active {
@@ -436,11 +514,15 @@ ul {
         flex-direction: column;
         align-items: center;
         gap: 2.5rem; /* Space out links in mobile menu */
+        padding: 2rem 0; /* RESPONSIVE: Add padding for mobile menu links */
     }
 
     .nav ul li a {
         font-size: 1.3rem; /* Larger font for mobile links */
         color: var(--text-dark); /* Dark text for mobile links */
+        white-space: normal; /* RESPONSIVE: Allow text to wrap in mobile menu */
+        text-align: center;
+        padding: 0.5rem 1rem; /* RESPONSIVE: Add horizontal padding for mobile links */
     }
 
     .nav ul li a:hover::after,
@@ -452,44 +534,66 @@ ul {
         display: none; /* Hide Hire Me button in mobile menu, or reposition if desired */
     }
     
+    /* Footer content already set to 1fr grid and centered in 992px media query, which applies here */
 }
 
 @media (max-width: 576px) {
     .section-title {
         font-size: 2rem;
+        /* RESPONSIVE: Further adjust padding for very small screens */
+        padding: 0 0.2rem;
     }
     
     .btn {
-        padding: 0.6rem 1.2rem;
+        padding: 0.8rem 1.5rem; /* Adjust padding for very small buttons */
+        font-size: 0.9rem;
     }
 
     .logo {
         font-size: 1.5rem;
     }
-}
 
-/* Responsive Styles */
-@media (max-width: 992px) {
-    .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 2rem;
+    /* RESPONSIVE: Adjust container padding for phones */
+    .container {
+        padding: 0 0.8rem;
     }
-    
-    .footer-nav ul {
-        justify-content: center;
-    }
-    
-    .footer-social {
-        justify-content: center;
-    }
-}
 
-@media (max-width: 576px) {
-    
     .footer-nav ul {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
+    }
+
+    .footer-bottom {
+        font-size: 0.8rem;
+    }
+}
+
+/* RESPONSIVE: Specific adjustments for very small mobile devices (e.g., iPhone SE portrait) */
+@media (max-width: 375px) {
+    .container {
+        padding: 0 0.5rem; /* Minimal padding for tiny screens */
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        padding: 0 0.2rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.1rem;
+        padding: 0 0.5rem;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .mobile-menu-btn {
+        font-size: 1.8rem;
+    }
+
+    .nav ul li a {
+        font-size: 1.1rem;
     }
 }

@@ -2,12 +2,14 @@
 .portfolio-hero {
     padding: 10rem 0 5rem;
     text-align: center;
-    /* Solid, vibrant pastel background for the hero */
     background-color: var(--accent-color-orange); /* Cheerful peach/light orange background */
 }
 
 .portfolio-hero .section-title {
     color: var(--text-dark); /* Dark text for title readability on orange */
+    /* RESPONSIVE: Ensure title text wraps on smaller screens */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .portfolio-hero .section-title::after {
@@ -17,8 +19,10 @@
 /* Portfolio Filter */
 .portfolio-filter {
     padding: 2rem 0;
-    /* Simple, solid light background for the filter section */
     background-color: var(--light-secondary); /* Very light off-white/pale blue */
+    /* RESPONSIVE: Add horizontal padding to prevent elements from touching screen edges */
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .filter-buttons {
@@ -26,6 +30,9 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
+    /* RESPONSIVE: Ensure buttons have some breathing room */
+    max-width: 900px; /* Limit max-width for better layout on very wide screens */
+    margin: 0 auto; /* Center buttons */
 }
 
 .filter-btn {
@@ -38,6 +45,11 @@
     cursor: pointer;
     transition: var(--transition);
     box-shadow: 0 4px 10px rgba(173, 216, 230, 0.4); /* Soft blue shadow */
+    /* RESPONSIVE: Prevent buttons from shrinking too much and allow text wrapping */
+    flex-shrink: 0;
+    white-space: nowrap; /* Prevent text from wrapping by default, but allow if very constrained */
+    min-width: fit-content; /* Ensure button doesn't get smaller than its content */
+    box-sizing: border-box; /* Include padding in button width */
 }
 
 .filter-btn:hover {
@@ -58,6 +70,9 @@
 .portfolio-grid-section {
     padding: 5rem 0;
     background-color: var(--light-color); /* Clean white background for the grid */
+    /* RESPONSIVE: Add horizontal padding */
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .portfolio-grid {
@@ -65,10 +80,16 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
+    /* RESPONSIVE: Center the grid items */
+    justify-items: center;
 }
 
 .portfolio-item {
     transition: var(--transition);
+    /* RESPONSIVE: Ensure item takes full width of its minmax constraint */
+    width: 100%;
+    max-width: 400px; /* Limit max width for readability on larger screens */
+    box-sizing: border-box; /* Include padding in the width calculation */
 }
 
 .portfolio-card {
@@ -76,7 +97,6 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    /* Apply the glass card effect with the new, more visible variables */
     background: var(--glass-bg); /* Nearly opaque white for clarity */
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
@@ -102,6 +122,8 @@
     height: 200px;
     object-fit: cover;
     transition: var(--transition);
+    /* RESPONSIVE: Ensure image maintains aspect ratio and scales within container */
+    display: block; /* Remove extra space below image */
 }
 
 .portfolio-item:hover .portfolio-image img {
@@ -113,18 +135,27 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    /* RESPONSIVE: Ensure text content handles overflow */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .portfolio-title {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     color: var(--text-dark); /* Dark title for clarity */
+    /* RESPONSIVE: Ensure title text wraps */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .portfolio-description {
     margin-bottom: 1rem;
     color: var(--gray-color); /* Good contrast for description */
     flex-grow: 1;
+    /* RESPONSIVE: Ensure description text wraps */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .portfolio-tags {
@@ -132,10 +163,11 @@
     flex-wrap: wrap;
     gap: 0.6rem; /* Slightly larger gap for tags */
     margin-bottom: 1.5rem;
+    /* RESPONSIVE: Ensure tags wrap without overflow */
+    justify-content: flex-start; /* Align tags to start of the line */
 }
 
 .portfolio-tags span {
-    /* Tags use a vibrant, multi-colored pastel scheme for a playful look */
     background-color: var(--accent-color-yellow); /* Cheerful yellow tag */
     color: var(--text-dark); /* Dark text for readability on light tag */
     padding: 0.4rem 0.9rem; /* Slightly more padding for tags */
@@ -143,6 +175,11 @@
     font-size: 0.85rem; /* Slightly larger font for tags */
     font-weight: 500;
     box-shadow: 0 1px 3px rgba(0,0,0,0.08); /* Subtle shadow */
+    /* RESPONSIVE: Prevent tags from shrinking too much and allow text wrapping */
+    flex-shrink: 0;
+    white-space: nowrap; /* Prevent text from wrapping by default, but allow if very constrained */
+    min-width: fit-content; /* Ensure tag doesn't get smaller than its content */
+    box-sizing: border-box; /* Include padding in tag width */
 }
 
 /* Alternate tag colors for more vibrancy and playfulness */
@@ -167,6 +204,9 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    /* RESPONSIVE: Ensure link text wraps */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .portfolio-link:hover {
@@ -182,20 +222,67 @@
 }
 
 /* Responsive Styles */
+@media (max-width: 992px) {
+    /* No specific changes here, general flex/grid handling suffices */
+}
+
 @media (max-width: 768px) {
     .portfolio-hero {
         padding: 8rem 0 3rem;
     }
 
+    .filter-buttons {
+        gap: 0.8rem; /* Slightly reduce gap between buttons */
+    }
+
     .filter-btn {
         padding: 0.5rem 1.2rem; /* Adjust padding for smaller buttons */
         font-size: 0.9rem;
+        white-space: normal; /* Allow text to wrap within buttons if necessary */
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Allow smaller card min-width */
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .portfolio-item {
+        max-width: 350px; /* Adjust max width for tablets */
+    }
+
+    .portfolio-title {
+        font-size: 1.4rem; /* Slightly smaller title */
+    }
+
+    .portfolio-image img {
+        height: 180px; /* Slightly reduce image height for smaller screens */
     }
 }
 
 @media (max-width: 576px) {
+    .filter-buttons {
+        flex-direction: column; /* Stack filter buttons vertically */
+        align-items: center; /* Center stacked buttons */
+        gap: 0.8rem; /* Keep gap consistent */
+    }
+
+    .filter-btn {
+        width: 100%; /* Make buttons full width when stacked */
+        max-width: 250px; /* Limit max width of individual stacked buttons */
+        padding: 0.6rem 1rem; /* Adjust padding */
+        font-size: 1rem; /* Make button text slightly larger for easier tapping */
+    }
+
     .portfolio-grid {
         grid-template-columns: 1fr; /* Single column on very small screens */
+        padding-left: 0.2rem;
+        padding-right: 0.2rem;
+    }
+
+    .portfolio-item {
+        margin: 0 auto; /* Center individual items when stacked */
+        max-width: 300px; /* Reduce max-width for phone screens */
     }
 
     .portfolio-card {
@@ -203,10 +290,64 @@
     }
 
     .portfolio-title {
-        font-size: 1.3rem;
+        font-size: 1.3rem; /* Further reduce title font size */
+    }
+
+    .portfolio-description {
+        font-size: 0.95rem; /* Slightly smaller description font size */
     }
 
     .portfolio-image img {
-        height: 180px; /* Slightly reduce image height */
+        height: 160px; /* Further reduce image height */
+    }
+
+    .portfolio-tags {
+        gap: 0.4rem; /* Reduce tag gap for tighter fit */
+    }
+
+    .portfolio-tags span {
+        font-size: 0.8rem; /* Smaller tag font size */
+        padding: 0.3rem 0.7rem; /* Smaller tag padding */
+    }
+}
+
+/* Specific adjustments for very small mobile devices like iPhone SE (375px width) */
+@media (max-width: 375px) {
+    .portfolio-hero {
+        padding: 6rem 0 2rem;
+    }
+
+    .filter-buttons {
+        gap: 0.7rem;
+    }
+
+    .filter-btn {
+        max-width: 220px; /* Even smaller max width for tiny screens */
+        font-size: 0.9rem;
+    }
+
+    .portfolio-item {
+        max-width: 280px; /* Even smaller max width for tiny screens */
+    }
+
+    .portfolio-card {
+        padding: 0.8rem;
+    }
+
+    .portfolio-title {
+        font-size: 1.1rem;
+    }
+
+    .portfolio-description {
+        font-size: 0.85rem;
+    }
+
+    .portfolio-image img {
+        height: 140px;
+    }
+
+    .portfolio-tags span {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.6rem;
     }
 }

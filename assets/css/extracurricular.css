@@ -2,24 +2,23 @@
 .extracurricular-hero {
     padding: 10rem 0 5rem;
     text-align: center;
-    /* REVISED: Solid, subtle pastel background for Hero */
     background-color: var(--light-secondary); /* A very light, subtle off-white */
 }
 
 .extracurricular-hero .section-title {
-    /* Retained: Use dark text */
     color: var(--text-dark);
+    /* RESPONSIVE: Ensure title text wraps on smaller screens */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .extracurricular-hero .section-title::after {
-    /* Retained: Use primary color for accent line */
     background-color: var(--primary-color);
 }
 
 /* Leadership Section */
 .leadership-section {
     padding: 5rem 0;
-    /* REVISED: Subtle background for Leadership section */
     background-color: var(--light-color); /* A very subtle, almost white color */
 }
 
@@ -28,17 +27,21 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
+    /* RESPONSIVE: Ensure grid items adapt and center */
+    justify-items: center; /* Center items within their grid cells */
 }
 
 .role-card {
     display: flex;
     flex-direction: column;
-    /* REVISED: Add background, shadow, border, and transition for card effect */
     background: var(--light-color); /* Light background for cards */
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
     transition: var(--transition);
     border: var(--glass-border); /* Subtle border for definition */
+    /* RESPONSIVE: Ensure cards take full width of their minmax and limit max width */
+    width: 100%;
+    max-width: 450px; /* Limit max width for readability on larger screens */
 }
 
 .role-card:hover {
@@ -50,24 +53,36 @@
 
 .role-header {
     padding: 1.5rem 1.5rem 0;
+    /* RESPONSIVE: Ensure content within header doesn't overflow */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .role-title {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     color: var(--text-dark);
+    /* RESPONSIVE: Ensure text wraps */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .role-organization {
     color: var(--primary-color);
     font-weight: 600;
     margin-bottom: 0.5rem;
+    /* RESPONSIVE: Ensure text wraps */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .role-duration {
     color: var(--gray-color);
     font-size: 0.9rem;
     margin-bottom: 1rem;
+    /* RESPONSIVE: Ensure text wraps */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .role-content {
@@ -87,11 +102,13 @@
     position: relative;
     padding-left: 1.5rem;
     color: var(--gray-color);
+    /* RESPONSIVE: Ensure list item text wraps */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .role-responsibilities li::before {
     content: '•';
-    /* REVISED: Use accent color for list bullets */
     color: var(--accent-color-orange);
     font-weight: bold;
     position: absolute;
@@ -100,22 +117,26 @@
 
 .role-image {
     margin-top: 1rem;
+    /* RESPONSIVE: Ensure image container fits without overflow */
+    width: 100%;
+    overflow: hidden; /* Hide any overflow if image aspect ratio is off */
 }
 
 .role-image img {
     width: 100%;
-    height: 300px;
+    height: 300px; /* Fixed height for consistency, object-fit handles ratio */
     border-radius: var(--border-radius);
-    /* REVISED: Use shadow variable */
     box-shadow: var(--shadow);
-    object-fit: cover; /* Ensure image covers the area nicely */
+    object-fit: cover;
+    /* RESPONSIVE: Ensure image maintains aspect ratio and scales within container */
+    max-width: 100%;
+    display: block; /* Remove extra space below image */
 }
 
 
 /* Events Section */
 .events-section {
     padding: 5rem 0;
-    /* REVISED: Subtle background for Events section (timeline) */
     background-color: var(--light-secondary); /* A very light, subtle off-white */
 }
 
@@ -124,6 +145,9 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem 0;
+    /* RESPONSIVE: Add horizontal padding to prevent overflow on very small screens */
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .events-timeline::before {
@@ -133,14 +157,20 @@
     left: 50px;
     width: 3px;
     height: 100%;
-    /* REVISED: Solid primary color for timeline line, no gradient */
     background-color: var(--primary-color);
+    /* RESPONSIVE: Adjust timeline line position for smaller screens */
+    left: 20px; /* Adjusted default for better mobile fit */
 }
 
 .event-item {
     position: relative;
     margin-bottom: 3rem;
     padding-left: 80px;
+    /* RESPONSIVE: Adjust padding for mobile to ensure content fits */
+    padding-left: 45px; /* Adjusted default for better mobile fit */
+    /* RESPONSIVE: Ensure content inside event-item handles overflow */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .event-date {
@@ -149,29 +179,32 @@
     left: 0;
     width: 100px;
     padding: 0.5rem 1rem;
-    /* REVISED: Use specific accent color for date background */
     background-color: var(--accent-color-blue);
-    /* REVISED: Use light color for text */
     color: var(--light-color);
     border-radius: 20px;
     font-weight: 600;
     text-align: center;
-    /* REVISED: Use shadow variable */
     box-shadow: var(--shadow);
+    /* RESPONSIVE: Adjust date position and size for mobile */
+    width: 70px; /* Smaller width for mobile */
+    padding: 0.4rem 0.8rem; /* Smaller padding */
+    font-size: 0.8rem; /* Smaller font size */
+    left: -15px; /* Move date closer to timeline line */
 }
 
 .event-content {
-    /* REVISED: Use light color for background */
     background: var(--light-color);
     padding: 1.5rem;
     border-radius: 20px;
-    /* REVISED: Use shadow variable */
     box-shadow: var(--shadow);
-    transition: var(--transition); /* Add transition for hover effect */
+    transition: var(--transition);
+    /* RESPONSIVE: Ensure content fits within its card */
+    width: 100%;
+    box-sizing: border-box; /* Include padding in width */
 }
 
 .event-content:hover {
-    transform: translateY(-5px); /* Add hover effect for cards */
+    transform: translateY(-5px);
     box-shadow: var(--shadow-hover);
 }
 
@@ -179,12 +212,18 @@
     font-size: 1.5rem;
     margin-bottom: 0.8rem;
     color: var(--text-dark);
+    /* RESPONSIVE: Ensure text wraps */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .event-description {
     margin-bottom: 1.5rem;
     color: var(--gray-color);
     line-height: 1.7;
+    /* RESPONSIVE: Ensure text wraps */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .event-highlights {
@@ -192,19 +231,24 @@
     flex-wrap: wrap;
     gap: 1rem;
     margin-bottom: 1.5rem;
+    /* RESPONSIVE: Ensure highlights wrap without overflow */
+    justify-content: flex-start; /* Align items to start */
 }
 
 .highlight {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    /* REVISED: Use a lighter primary color for background */
     background-color: var(--primary-light);
-    /* REVISED: Ensure text is visible on the highlight background */
     color: var(--text-dark);
     padding: 0.5rem 1.2rem;
     border-radius: 20px;
     font-size: 0.9rem;
+    /* RESPONSIVE: Ensure highlight text wraps if needed */
+    white-space: normal; /* Allow text to wrap within highlight pill */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    flex-shrink: 0; /* Prevent shrinking too much */
 }
 
 .highlight i {
@@ -213,46 +257,155 @@
 
 .event-image {
     margin-top: 1rem;
+    /* RESPONSIVE: Ensure image container fits without overflow */
+    width: 100%;
+    overflow: hidden;
 }
 
 .event-image img {
     width: 100%;
     border-radius: var(--border-radius);
-    /* REVISED: Use shadow variable */
     box-shadow: var(--shadow);
-    object-fit: cover; /* Ensure image covers the area nicely */
+    object-fit: cover;
+    /* RESPONSIVE: Ensure image maintains aspect ratio and scales within container */
+    max-width: 100%;
+    display: block;
+    height: auto; /* Allow height to adjust naturally with width */
 }
 
 /* Responsive Styles */
+@media (max-width: 992px) {
+    /* No specific changes here for responsiveness, already handled by `auto-fit` and general adjustments */
+}
+
 @media (max-width: 768px) {
     .extracurricular-hero {
         padding: 8rem 0 3rem;
     }
-    
+
+    .roles-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted minmax for smaller tablets */
+    }
+
+    /* Timeline adjustments */
     .events-timeline::before {
-        left: 30px;
+        left: 20px; /* Ensure line stays aligned on tablets */
     }
-    
+
     .event-item {
-        padding-left: 60px;
+        padding-left: 45px; /* Adjust padding for event content to align with date */
     }
-    
+
     .event-date {
-        width: 80px;
+        left: -15px; /* Keep date aligned to the left of the line */
+        width: 70px;
+        font-size: 0.8rem;
     }
 }
 
 @media (max-width: 576px) {
+    .roles-grid {
+        grid-template-columns: 1fr; /* Stack leadership roles vertically on small phones */
+    }
+
+    .role-card {
+        margin: 0 auto; /* Center individual role cards when stacked */
+        max-width: 350px; /* Limit max width for better readability on small screens */
+    }
+
+    /* Further timeline adjustments for very small screens */
+    .events-timeline {
+        padding-left: 0.5rem; /* Reduce padding to give more space for content */
+        padding-right: 0.5rem;
+    }
+
     .events-timeline::before {
-        left: 15px;
+        left: 15px; /* Adjust line position */
     }
-    
+
     .event-item {
-        padding-left: 45px;
+        padding-left: 40px; /* Further reduce padding for content */
     }
-    
+
     .event-date {
-        width: 60px;
-        font-size: 0.8rem;
+        left: -10px; /* Adjust date position */
+        width: 60px; /* Further reduce date width */
+        font-size: 0.75rem; /* Further reduce date font size */
+    }
+
+    .event-content {
+        padding: 1rem; /* Reduce content padding */
+    }
+
+    .event-title {
+        font-size: 1.3rem; /* Smaller title font size */
+    }
+
+    .event-description {
+        font-size: 0.95rem; /* Smaller description font size */
+    }
+
+    .highlight {
+        font-size: 0.8rem; /* Smaller highlight text */
+        padding: 0.4rem 0.8rem; /* Smaller highlight padding */
+    }
+}
+
+/* Specific adjustments for very small mobile devices like iPhone SE (375px width) */
+@media (max-width: 375px) {
+    .extracurricular-hero {
+        padding: 6rem 0 2rem;
+    }
+
+    .roles-grid {
+        grid-template-columns: 1fr; /* Ensure single column */
+    }
+
+    .role-card {
+        max-width: 300px; /* Even smaller max-width */
+    }
+
+    .role-title {
+        font-size: 1.3rem;
+    }
+
+    .role-organization {
+        font-size: 0.95rem;
+    }
+
+    .role-responsibilities li {
+        font-size: 0.9rem;
+    }
+
+    .events-timeline::before {
+        left: 10px; /* Minimal left margin for the line */
+    }
+
+    .event-item {
+        padding-left: 30px; /* Minimal padding for event content */
+    }
+
+    .event-date {
+        left: -5px; /* Minimal left offset for the date */
+        width: 55px; /* Smallest date width */
+        font-size: 0.7rem; /* Smallest date font size */
+        padding: 0.3rem 0.5rem;
+    }
+
+    .event-content {
+        padding: 0.8rem; /* Minimal content padding */
+    }
+
+    .event-title {
+        font-size: 1.2rem;
+    }
+
+    .event-description {
+        font-size: 0.85rem;
+    }
+
+    .highlight {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.7rem;
     }
 }

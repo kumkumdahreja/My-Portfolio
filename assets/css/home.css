@@ -4,7 +4,6 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    /* REVISED: Solid, subtle pastel background for Hero */
     background-color: var(--light-color); /* A very soft, almost white pastel base */
 }
 
@@ -13,72 +12,90 @@
     align-items: center;
     justify-content: space-between;
     gap: 3rem;
+    /* RESPONSIVE: Allow content to wrap on smaller screens */
+    flex-wrap: wrap; /* Added for responsiveness */
 }
 
 .hero-content {
     flex: 1;
+    /* RESPONSIVE: Ensure content takes full width on smaller screens */
+    min-width: 300px; /* Ensures content doesn't shrink too much */
 }
 
 .hero-subtitle {
     font-size: 1.2rem;
-    /* Retained: Primary color for subtle branding */
     color: var(--primary-color);
     margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 2px;
+    /* RESPONSIVE: Ensure text wraps */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .hero-title {
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
-    /* Retained: Darker text for stronger impact */
     color: var(--text-dark);
     line-height: 1.2;
+    /* RESPONSIVE: Ensure text wraps */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .hero-role {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
-    /* Retained: Slightly richer gray for better presence */
     color: var(--gray-color);
     font-weight: 400;
+    /* RESPONSIVE: Ensure text wraps */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .hero-description {
     font-size: 1.1rem;
     margin-bottom: 2rem;
-    /* Retained: Slightly richer gray for better presence */
     color: var(--gray-color);
     max-width: 600px;
     line-height: 1.8;
+    /* RESPONSIVE: Ensure text wraps */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .hero-buttons {
     display: flex;
     gap: 1.5rem;
     margin-top: 2rem;
+    /* RESPONSIVE: Allow buttons to wrap and center on smaller screens */
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Default alignment */
 }
 
 .hero-image {
     flex: 1;
     position: relative;
+    /* RESPONSIVE: Ensure image takes full width on smaller screens, and centers */
+    min-width: 280px; /* Ensures image doesn't shrink too much */
+    display: flex; /* For centering the image-wrapper */
+    justify-content: center; /* For centering the image-wrapper */
+    align-items: center; /* For centering the image-wrapper */
 }
 
 .image-wrapper {
     position: relative;
     width: 100%;
     max-width: 400px;
-    margin: 0 auto;
+    margin: 0 auto; /* Ensures centering if max-width is hit */
     border-radius: 50%; /* Circular shape */
     overflow: hidden;
-    /* Retained: Slightly more defined, but still subtle, pastel shadow */
     box-shadow:
-        0 10px 30px rgba(255, 192, 203, 0.25), /* Soft pink shadow, slightly darker */
-        0 0 0 10px rgba(173, 216, 230, 0.15); /* Slightly more visible light blue outer glow */
+        0 10px 30px rgba(255, 192, 203, 0.25),
+        0 0 0 10px rgba(173, 216, 230, 0.15);
     transition: var(--transition);
     aspect-ratio: 1/1; /* Ensures perfect circle */
-    /* Retained: A bit more visible subtle border */
-    border: 5px solid rgba(255, 192, 203, 0.3); /* Slightly more opaque light pink border */
+    border: 5px solid rgba(255, 192, 203, 0.3);
     transform-style: preserve-3d;
     perspective: 1000px;
 }
@@ -90,8 +107,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    /* REVISED: Solid, very subtle transparent overlay for image */
-    background-color: rgba(255, 192, 203, 0.05); /* Extremely light pink */
+    background-color: rgba(255, 192, 203, 0.05);
     z-index: 1;
     mix-blend-mode: overlay;
 }
@@ -104,16 +120,15 @@
     transition:
         transform 0.5s ease,
         filter 0.3s ease;
-    transform: scale(1.05); /* Slight zoom */
-    filter: grayscale(10%) contrast(110%); /* Subtle photo filter, less grayscale */
+    transform: scale(1.05);
+    filter: grayscale(10%) contrast(110%);
 }
 
 /* Hover Effects */
 .image-wrapper:hover {
-    /* Retained: More pronounced but still pastel hover effect */
     box-shadow:
-        0 15px 45px rgba(255, 192, 203, 0.4), /* Stronger pink tint */
-        0 0 0 15px rgba(173, 216, 230, 0.25); /* Stronger blue outer glow */
+        0 15px 45px rgba(255, 192, 203, 0.4),
+        0 0 0 15px rgba(173, 216, 230, 0.25);
     transform: translateY(-5px) rotateY(10deg);
 }
 
@@ -128,7 +143,6 @@
     50% { transform: translateY(-10px); }
 }
 
-/* Add this if you want a continuous floating animation */
 .image-wrapper {
     animation: float 6s ease-in-out infinite;
 }
@@ -136,8 +150,7 @@
 /* About Section */
 .about-section {
     padding: 5rem 0;
-    /* REVISED: Solid, vibrant pastel background for About section */
-    background-color: var(--primary-light); /* Lightest Pink */
+    background-color: var(--primary-light);
 }
 
 .about-content {
@@ -145,14 +158,15 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
     align-items: center;
-    /* Retained: Subtle glass effect to the whole content block within About */
     background: var(--glass-bg);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border-radius: var(--border-radius);
     border: var(--glass-border);
     box-shadow: var(--shadow);
-    padding: 3rem; /* Add padding for content inside glass card */
+    padding: 3rem;
+    /* RESPONSIVE: Allow grid columns to stack on smaller screens */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted for responsiveness */
 }
 
 
@@ -160,8 +174,10 @@
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
     line-height: 1.8;
-    /* Retained: Gray color for readability on light background */
     color: var(--gray-color);
+    /* RESPONSIVE: Ensure text wraps */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .personal-info {
@@ -171,64 +187,78 @@
 .info-item {
     display: flex;
     margin-bottom: 1rem;
+    /* RESPONSIVE: Allow items to wrap if content is too long */
+    flex-wrap: wrap;
 }
 
 .info-item span:first-child {
     font-weight: 600;
     min-width: 100px;
-    /* Retained: Dark text for labels */
     color: var(--text-dark);
+    /* RESPONSIVE: Ensure text wraps */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .info-item span:last-child {
-    /* Retained: Gray color for values */
     color: var(--gray-color);
+    /* RESPONSIVE: Ensure text wraps */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    flex: 1; /* Allow the second span to take remaining space */
 }
 
 .skills-progress {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    /* Retained: Subtle, contrasting background to the skills progress area */
-    background-color: var(--light-secondary); /* Very subtle off-white background */
+    background-color: var(--light-secondary);
     border-radius: var(--border-radius);
     padding: 2rem;
-    box-shadow: inset 0 2px 5px rgba(0,0,0,0.05); /* Subtle inner shadow */
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
 }
 
 .skill-item {
     margin-bottom: 1.5rem;
+    /* RESPONSIVE: Ensure skill item takes full width */
+    width: 100%;
 }
 
 .skill-info {
     display: flex;
     justify-content: space-between;
     margin-bottom: 0.5rem;
+    /* RESPONSIVE: Ensure text wraps within skill info */
+    flex-wrap: wrap;
+    gap: 0.5rem; /* Add a small gap if they wrap */
 }
 
 .skill-info span:first-child {
     font-weight: 600;
-    /* Retained: Dark text for skill names */
     color: var(--text-dark);
+    /* RESPONSIVE: Ensure text wraps */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .skill-info span:last-child {
-    /* Retained: Gray color for percentages */
     color: var(--gray-color);
+    /* RESPONSIVE: Ensure text wraps */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .progress-bar {
-    height: 10px; /* Slightly thicker progress bar for better visual */
-    background-color: var(--light-color); /* Retained: White background for the bar itself to contrast with skill area background */
-    border-radius: 5px; /* Slightly more rounded */
+    height: 10px;
+    background-color: var(--light-color);
+    border-radius: 5px;
     overflow: hidden;
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1); /* Subtle inner shadow for depth */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
 }
 
 .progress {
     height: 100%;
-    /* Retained: Strong contrast color for progress fill - primary dark */
-    background-color: var(--primary-dark); /* Darker pink for strong contrast */
+    background-color: var(--primary-dark);
     border-radius: 5px;
     transition: width 1s ease;
 }
@@ -236,8 +266,7 @@
 /* Stats Section */
 .stats-section {
     padding: 5rem 0;
-    /* REVISED: Solid, vibrant pastel background for Stats section */
-    background-color: var(--accent-color-purple); /* Cheerful Lavender */
+    background-color: var(--accent-color-purple);
 }
 
 .stats-grid {
@@ -245,19 +274,23 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
+    /* RESPONSIVE: Ensure grid adapts to available space */
+    justify-items: center; /* Center items within their grid cells */
 }
 
 .stat-item {
     padding: 2rem;
     text-align: center;
     transition: var(--transition);
-    /* Retained: Glass effect for stat items */
     background: var(--glass-bg);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border-radius: var(--border-radius);
     border: var(--glass-border);
     box-shadow: var(--shadow);
+    /* RESPONSIVE: Ensure stat item doesn't get too small */
+    width: 100%; /* Take full width of its minmax constraint */
+    max-width: 300px; /* Optional: cap max width for larger screens if needed */
 }
 
 .stat-item:hover {
@@ -270,22 +303,25 @@
 .stat-number {
     font-size: 3rem;
     font-weight: 700;
-    /* Retained: Primary color for stats number for stronger branding */
     color: var(--primary-color);
     margin-bottom: 0.5rem;
+    /* RESPONSIVE: Ensure text wraps */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .stat-title {
     font-size: 1.2rem;
-    /* Retained: Primary dark for better contrast and branding */
     color: var(--primary-dark);
+    /* RESPONSIVE: Ensure text wraps */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 /* Services Preview */
 .services-section {
     padding: 5rem 0;
-    /* REVISED: Solid, vibrant pastel background for Services Preview section */
-    background-color: var(--accent-color-blue); /* Light Sky Blue */
+    background-color: var(--accent-color-blue);
 }
 
 .services-grid {
@@ -293,55 +329,60 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
+    /* RESPONSIVE: Ensure grid adapts to available space */
+    justify-items: center; /* Center items within their grid cells */
 }
 
 .service-item {
     padding: 2rem;
     text-align: center;
-    /* REFINED: FUN, VERY GOOD LOOK for service cards - enhanced glass effect with solid background */
-    background-color: var(--light-color); /* Solid light background for cards */
-    backdrop-filter: blur(12px); /* Still use blur for the "glass" effect over the solid color */
+    background-color: var(--light-color);
+    backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-radius: var(--border-radius);
-    border: 2px solid rgba(255, 192, 203, 0.8); /* Stronger, more visible pink border by default */
-    box-shadow: 0 8px 25px rgba(255, 192, 203, 0.4); /* Enhanced pink shadow for depth */
+    border: 2px solid rgba(255, 192, 203, 0.8);
+    box-shadow: 0 8px 25px rgba(255, 192, 203, 0.4);
     transition: var(--transition);
+    /* RESPONSIVE: Ensure service item doesn't get too small */
+    width: 100%; /* Take full width of its minmax constraint */
+    max-width: 400px; /* Optional: cap max width for larger screens if needed */
 }
 
 .service-item:hover {
-    transform: translateY(-10px) scale(1.03); /* More pronounced lift and slight scale on hover */
-    box-shadow: 0 15px 40px rgba(173, 216, 230, 0.7); /* Even more vibrant blue shadow on hover */
-    border: 2px solid var(--accent-color-yellow); /* Border changes to cheerful yellow on hover! */
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 40px rgba(173, 216, 230, 0.7);
+    border: 2px solid var(--accent-color-yellow);
 }
 
 
 .service-icon {
-    font-size: 3rem; /* Even larger icon for more presence and fun */
-    /* Retained: Dark, contrasting color for the icon, visible on the background glow */
+    font-size: 3rem;
     color: var(--text-dark);
     margin-bottom: 1.5rem;
-    /* Retained: Subtle, playful radial glow behind icons - now over a solid background */
-    background: radial-gradient(circle at center, var(--primary-light) 0%, transparent 70%); /* Soft pink glow */
+    background: radial-gradient(circle at center, var(--primary-light) 0%, transparent 70%);
     border-radius: 50%;
-    padding: 0.8rem; /* More padding for a larger glow area */
-    box-shadow: 0 0 15px rgba(255, 192, 203, 0.5); /* Soft outer glow for the icon container */
+    padding: 0.8rem;
+    box-shadow: 0 0 15px rgba(255, 192, 203, 0.5);
 }
 
 .service-title {
-    font-size: 1.7rem; /* Even larger title */
+    font-size: 1.7rem;
     margin-bottom: 1rem;
-    /* Retained: Primary dark for better branding and contrast */
     color: var(--primary-dark);
+    /* RESPONSIVE: Ensure text wraps */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .service-description {
     margin-bottom: 1.5rem;
-    /* Retained: Use gray color */
     color: var(--gray-color);
+    /* RESPONSIVE: Ensure text wraps */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .service-link {
-    /* Retained: Accent-color-orange for the link for a fresh pop */
     color: var( --accent-color-green);
     font-weight: 600;
     display: inline-flex;
@@ -350,7 +391,6 @@
 }
 
 .service-link:hover {
-    /* Retained: Primary color on hover for consistent branding */
     color: var(--primary-color);
 }
 
@@ -371,23 +411,45 @@
 
     .hero-content {
         margin-bottom: 3rem;
+        /* RESPONSIVE: Ensure text content takes full width on smaller screens */
+        width: 100%;
+        max-width: 600px; /* Limit max width for better readability */
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .hero-buttons {
         justify-content: center;
+        /* RESPONSIVE: Allow buttons to stack if necessary */
+        flex-direction: row; /* Keep row for wider tablet views */
+        flex-wrap: wrap; /* Allow wrapping */
     }
 
     .hero-description {
         margin: 0 auto 2rem;
     }
 
+    .hero-image {
+        order: -1; /* Move image above content on smaller screens */
+        margin-bottom: 3rem; /* Add space below image */
+        width: 100%; /* Ensure image container takes full width */
+        max-width: 400px; /* Keep consistent max-width for circular image */
+    }
+
     .about-content {
         grid-template-columns: 1fr;
-        padding: 2rem; /* Adjust padding for smaller screens */
+        padding: 2rem;
+        /* RESPONSIVE: Center the about content within its container */
+        margin: 0 auto;
+        max-width: 600px; /* Limit width for better readability */
     }
 
     .skills-progress {
-        padding: 1.5rem; /* Adjust padding for smaller screens */
+        padding: 1.5rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Adjust minmax for smaller screens */
     }
 }
 
@@ -405,12 +467,34 @@
     }
 
     .hero-buttons {
-        flex-direction: column;
+        flex-direction: column; /* Stack buttons vertically on mobile */
         gap: 1rem;
+        width: 100%; /* Ensure buttons take full width */
+    }
+
+    /* Make buttons full width on small screens */
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 300px; /* Limit individual button width */
+        margin: 0 auto; /* Center individual buttons */
     }
 
     .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr; /* Stack stats vertically on smaller mobile */
+    }
+
+    .stat-item {
+        max-width: 300px; /* Maintain a reasonable max-width for individual items */
+        margin: 0 auto; /* Center stat items when stacked */
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr; /* Stack services vertically on smaller mobile */
+    }
+
+    .service-item {
+        max-width: 350px; /* Maintain a reasonable max-width for individual items */
+        margin: 0 auto; /* Center service items when stacked */
     }
 }
 
@@ -427,7 +511,81 @@
         font-size: 1rem;
     }
 
-    .stats-grid {
-        grid-template-columns: 1fr;
+    .about-content {
+        padding: 1.5rem; /* Further reduce padding for very small screens */
+    }
+
+    .skills-progress {
+        padding: 1rem; /* Further reduce padding for very small screens */
+    }
+
+    /* Ensure text in skill info doesn't overflow */
+    .skill-info span:first-child,
+    .skill-info span:last-child {
+        font-size: 0.95rem; /* Slightly smaller font for tighter fit */
+    }
+
+    .stat-number {
+        font-size: 2.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .stat-title {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+
+    .service-title {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .service-description {
+        font-size: 0.95rem; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Very small mobile devices (e.g., iPhone SE portrait) */
+@media (max-width: 375px) {
+    .hero {
+        padding: 8rem 0 2rem; /* Even less padding on very small screens */
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-role {
+        font-size: 1rem;
+    }
+
+    .hero-description {
+        font-size: 0.9rem;
+    }
+
+    .image-wrapper {
+        max-width: 250px; /* Make image slightly smaller on very small screens */
+    }
+
+    .about-content {
+        padding: 1rem; /* Minimum padding */
+    }
+
+    .skills-progress {
+        padding: 0.8rem;
+    }
+
+    .stat-item,
+    .service-item {
+        padding: 1.5rem; /* Reduce padding for items */
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .service-icon {
+        font-size: 2.5rem; /* Smaller icon */
+    }
+    
+    .service-title {
+        font-size: 1.3rem; /* Smaller title */
     }
 }
