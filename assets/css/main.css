@@ -331,32 +331,52 @@ ul {
     color: var(--primary-color); /* Active link in vibrant pink */
 }
 
+/* --- HIRE ME BUTTON STYLES --- */
 .hire-me-btn {
-    /* REVISED: Ensure button is spacious and text is visible */
     background-color: var(--primary-color); /* Vibrant Pink */
     color: var(--text-light); /* White text */
-    padding: 1.2rem 3rem; /* Increased padding for spaciousness */
-    border-radius: 25px; /* Matches other buttons */
+    /* Increased padding to make it a more prominent rounded rectangle/pill */
+    padding: 0.9rem 2.0rem; /* Adjusted for a balanced, spacious look */
+    border-radius: 50px; /* Use a larger value for a perfect pill shape */
     font-weight: 600;
-    font-size: 1.05rem; /* Slightly larger text */
+    font-size: 1rem; /* Good base font size */
     transition: var(--transition);
     cursor: pointer;
     border: none;
     font-family: var(--font-primary);
     box-shadow: var(--shadow); /* Apply default shadow */
-    /* RESPONSIVE: Ensure button adapts and doesn't overflow */
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: inline-block; /* Ensure it behaves like a block for padding/sizing */
-    text-align: center; /* Center text within the button */
+    white-space: nowrap; /* Keep text on one line */
+    overflow: hidden; /* Hide overflow if text is too long (though nowrap helps) */
+    text-overflow: ellipsis; /* Add ellipsis if text is cut off */
+    display: inline-block; /* Essential for padding and width to work */
+    text-align: center; /* Center text inside the button */
+    margin-left: 1.5rem; /* Add some space from the navigation items */
+    min-width: 120px; /* Ensure a minimum width for consistent shape */
 }
 
 .hire-me-btn:hover {
-    background-color: var(--accent-color-blue); /* Hover to vibrant blue */
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-hover);
+    background-color: var(--primary-dark); /* Darker pink on hover */
+    transform: translateY(-3px); /* Subtle lift effect */
+    box-shadow: var(--shadow-hover); /* Enhanced shadow on hover */
 }
+
+/* Responsive adjustments for the hire-me-btn */
+@media (max-width: 992px) {
+    .hire-me-btn {
+        padding: 0.7rem 1.6rem; /* Slightly smaller padding */
+        font-size: 0.9rem; /* Slightly smaller text */
+        margin-left: 1rem; /* Reduce margin */
+        min-width: 100px; /* Maintain minimum width */
+    }
+}
+
+@media (max-width: 768px) {
+    .hire-me-btn {
+        display: none; /* IMPORTANT: Hide the button when the mobile menu is active */
+    }
+}
+
+
 
 .mobile-menu-btn {
     display: none; /* Hidden by default on desktop */
@@ -367,7 +387,6 @@ ul {
     border: none; /* Remove default button border */
     padding: 0.5rem; /* Add padding for easier tap */
 }
-
 
 
 /* Footer */
@@ -461,9 +480,10 @@ ul {
         font-size: 1.6rem;
     }
     
+    /* REVISED: hire-me-btn on smaller desktop/tablet */
     .hire-me-btn {
-        padding: 0.7rem 1.5rem; /* Adjust padding for smaller screens */
-        font-size: 0.95rem;
+        padding: 0.8rem 1.8rem; /* Use the standard .btn padding */
+        font-size: 0.95rem; /* Slightly smaller text */
     }
 
     .section-title {
@@ -530,8 +550,9 @@ ul {
         background-color: var(--accent-color-blue); /* Mobile underline in blue for distinction */
     }
 
+    /* REVISED: Hide Hire Me button on mobile screens */
     .hire-me-btn {
-        display: none; /* Hide Hire Me button in mobile menu, or reposition if desired */
+        display: none; 
     }
     
     /* Footer content already set to 1fr grid and centered in 992px media query, which applies here */
