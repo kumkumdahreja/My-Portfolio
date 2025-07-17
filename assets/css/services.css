@@ -1,677 +1,700 @@
 /* Services Hero */
 .services-hero {
-    padding: 10rem 0 5rem;
-    text-align: center;
-    background-color: var(--primary-color);
+  padding: 10rem 0 5rem;
+  text-align: center;
+  background-color: var(--primary-color);
 }
 
 .services-hero .section-title {
-    color: var(--text-dark); /* Dark text for title readability on green */
-    /* RESPONSIVE: Ensure title text wraps on smaller screens */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  color: var(--text-dark); /* Dark text for title readability on green */
+  /* RESPONSIVE: Ensure title text wraps on smaller screens */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .services-hero .section-title::after {
-    background-color: var(--primary-color); /* Underline with vibrant pink */
+  background-color: var(--primary-color); /* Underline with vibrant pink */
 }
 
 /* Development Services */
 .development-services {
-    padding: 5rem 0;
-    background-color: var(--light-color); /* Clean white background for service cards */
-    /* RESPONSIVE: Add horizontal padding to prevent content from touching screen edges */
-    padding-left: 1rem;
-    padding-right: 1rem;
+  padding: 5rem 0;
+  background-color: var(
+    --light-color
+  ); /* Clean white background for service cards */
+  /* RESPONSIVE: Add horizontal padding to prevent content from touching screen edges */
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-    /* RESPONSIVE: Center grid items */
-    justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  /* RESPONSIVE: Center grid items */
+  justify-items: center;
 }
 
 .service-card {
-    padding: 2rem;
-    text-align: center;
-    background: var(--glass-bg); /* Nearly opaque white for clarity */
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border-radius: var(--border-radius);
-    border: 1px solid var(--glass-border); /* Clearer pink border by default */
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-    /* RESPONSIVE: Ensure cards take full width of their minmax and limit max width */
-    width: 100%;
-    max-width: 400px; /* Limit max width for readability on larger screens */
-    box-sizing: border-box; /* Include padding in the width */
+  padding: 2rem;
+  text-align: center;
+  background: var(--glass-bg); /* Nearly opaque white for clarity */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--glass-border); /* Clearer pink border by default */
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  /* RESPONSIVE: Ensure cards take full width of their minmax and limit max width */
+  width: 100%;
+  max-width: 400px; /* Limit max width for readability on larger screens */
+  box-sizing: border-box; /* Include padding in the width */
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
-    border: 1px solid var(--glass-border-hover); /* Vibrant blue border on hover */
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border: 1px solid var(--glass-border-hover); /* Vibrant blue border on hover */
 }
 
 .service-icon {
-    font-size: 2.8rem; /* Slightly larger icons for more presence */
-    color: var(--accent-color-purple); /* Icons in vibrant lavender */
-    margin-bottom: 1.5rem;
-    background: radial-gradient(circle at center, rgba(224, 187, 228, 0.2) 0%, transparent 70%); /* Soft lavender glow */
-    padding: 0.5rem;
-    border-radius: 50%;
-    /* RESPONSIVE: Ensure icon doesn't cause overflow */
-    flex-shrink: 0;
+  font-size: 2.8rem; /* Slightly larger icons for more presence */
+  color: var(--accent-color-purple); /* Icons in vibrant lavender */
+  margin-bottom: 1.5rem;
+  background: radial-gradient(
+    circle at center,
+    rgba(224, 187, 228, 0.2) 0%,
+    transparent 70%
+  ); /* Soft lavender glow */
+  padding: 0.5rem;
+  border-radius: 50%;
+  /* RESPONSIVE: Ensure icon doesn't cause overflow */
+  flex-shrink: 0;
 }
 
 .service-title {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: var(--text-dark); /* Dark title for clarity */
-    /* RESPONSIVE: Ensure title text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark); /* Dark title for clarity */
+  /* RESPONSIVE: Ensure title text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .service-description {
-    margin-bottom: 1.5rem;
-    color: var(--gray-color); /* Good contrast for description */
-    /* RESPONSIVE: Ensure description text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  margin-bottom: 1.5rem;
+  color: var(--gray-color); /* Good contrast for description */
+  /* RESPONSIVE: Ensure description text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .service-features {
-    text-align: left;
-    margin-bottom: 1.5rem;
+  text-align: left;
+  margin-bottom: 1.5rem;
 }
 
 .service-features li {
-    margin-bottom: 0.5rem;
-    position: relative;
-    padding-left: 1.5rem;
-    color: var(--gray-color); /* Good contrast for list items */
-    /* RESPONSIVE: Ensure list item text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+  color: var(--gray-color); /* Good contrast for list items */
+  /* RESPONSIVE: Ensure list item text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .service-features li::before {
-    content: '•';
-    color: var(--accent-color-orange); /* Bullet points in cheerful orange */
-    font-weight: bold;
-    position: absolute;
-    left: 0;
+  content: "•";
+  color: var(--accent-color-orange); /* Bullet points in cheerful orange */
+  font-weight: bold;
+  position: absolute;
+  left: 0;
 }
 
 /* Brand Collaboration */
 .brand-collaboration {
-    padding: 5rem 0;
-    background-color: var(--primary-light); /* Lightest pink background */
-    /* RESPONSIVE: Add horizontal padding */
-    padding-left: 1rem;
-    padding-right: 1rem;
+  padding: 5rem 0;
+  background-color: var(--primary-light); /* Lightest pink background */
+  /* RESPONSIVE: Add horizontal padding */
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .collaboration-content {
-    display: flex;
-    align-items: center;
-    padding: 2rem;
-    gap: 3rem;
-    background: var(--glass-bg); /* Nearly opaque white for clarity */
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border-radius: var(--border-radius);
-    border: 1px solid var(--glass-border); /* Clearer pink border */
-    box-shadow: var(--shadow);
-    /* RESPONSIVE: Limit max width and center the content container */
-    max-width: 1200px; /* Adjust as needed */
-    margin: 0 auto;
-    box-sizing: border-box; /* Include padding in the width */
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  gap: 3rem;
+  background: var(--glass-bg); /* Nearly opaque white for clarity */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--glass-border); /* Clearer pink border */
+  box-shadow: var(--shadow);
+  /* RESPONSIVE: Limit max width and center the content container */
+  max-width: 1200px; /* Adjust as needed */
+  margin: 0 auto;
+  box-sizing: border-box; /* Include padding in the width */
 }
 
 .collab-text {
-    flex: 1;
-    /* RESPONSIVE: Ensure text content handles overflow */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  flex: 1;
+  /* RESPONSIVE: Ensure text content handles overflow */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .collab-text h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    color: var(--text-dark); /* Dark title for clarity */
-    /* RESPONSIVE: Ensure heading text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-dark); /* Dark title for clarity */
+  /* RESPONSIVE: Ensure heading text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .collab-text p {
-    margin-bottom: 1.5rem;
-    line-height: 1.8;
-    color: var(--gray-color); /* Good contrast for paragraph text */
-    /* RESPONSIVE: Ensure paragraph text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  color: var(--gray-color); /* Good contrast for paragraph text */
+  /* RESPONSIVE: Ensure paragraph text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .collab-benefits h4 {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-    color: var(--text-dark); /* Dark heading for benefits */
-    /* RESPONSIVE: Ensure heading text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark); /* Dark heading for benefits */
+  /* RESPONSIVE: Ensure heading text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .collab-benefits ul {
-    margin-bottom: 2rem;
-    /* RESPONSIVE: Remove default padding from ul */
-    padding-left: 0;
-    list-style: none; /* Remove bullet points if not custom styled */
+  margin-bottom: 2rem;
+  /* RESPONSIVE: Remove default padding from ul */
+  padding-left: 0;
+  list-style: none; /* Remove bullet points if not custom styled */
 }
 
 .collab-benefits li {
-    margin-bottom: 0.8rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--gray-color); /* Good contrast for list items */
-    /* RESPONSIVE: Ensure list item text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--gray-color); /* Good contrast for list items */
+  /* RESPONSIVE: Ensure list item text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .collab-benefits i {
-    color: var(--primary-color); /* Benefit icons in vibrant pink */
-    flex-shrink: 0; /* Prevent icon from shrinking */
+  color: var(--primary-color); /* Benefit icons in vibrant pink */
+  flex-shrink: 0; /* Prevent icon from shrinking */
 }
 
 .collab-types h4 {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-    color: var(--text-dark); /* Dark heading for collaboration types */
-    /* RESPONSIVE: Ensure heading text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark); /* Dark heading for collaboration types */
+  /* RESPONSIVE: Ensure heading text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .types-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 1rem;
-    margin-bottom: 2rem;
-    /* RESPONSIVE: Center grid items */
-    justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+  /* RESPONSIVE: Center grid items */
+  justify-items: center;
 }
 
 .type-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 1rem;
-    background-color: var(--accent-color-yellow); /* Cheerful yellow for type items */
-    color: var(--text-dark); /* Dark text on light background */
-    border-radius: var(--border-radius);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: var(--transition);
-    /* RESPONSIVE: Ensure items take full width of their minmax and limit max width */
-    width: 100%;
-    max-width: 180px; /* Limit max width for a single type item */
-    box-sizing: border-box; /* Include padding in the width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: var(
+    --accent-color-yellow
+  ); /* Cheerful yellow for type items */
+  color: var(--text-dark); /* Dark text on light background */
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+  /* RESPONSIVE: Ensure items take full width of their minmax and limit max width */
+  width: 100%;
+  max-width: 180px; /* Limit max width for a single type item */
+  box-sizing: border-box; /* Include padding in the width */
 }
 
 /* Alternate type item colors for more vibrancy */
 .type-item:nth-child(2n) {
-    background-color: var(--accent-color-blue); /* Sky blue alternate */
+  background-color: var(--accent-color-blue); /* Sky blue alternate */
 }
 
 .type-item:nth-child(3n) {
-    background-color: var(--accent-color-purple); /* Lavender alternate */
+  background-color: var(--accent-color-purple); /* Lavender alternate */
 }
 .type-item:nth-child(4n) {
-    background-color: var(--accent-color-green); /* Mint green alternate */
+  background-color: var(--accent-color-green); /* Mint green alternate */
 }
 
-
 .type-item:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-hover);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
 }
 
 .type-item i {
-    font-size: 1.8rem; /* Slightly larger icons for types */
-    color: var(--primary-color); /* Icons in vibrant pink */
-    flex-shrink: 0;
+  font-size: 1.8rem; /* Slightly larger icons for types */
+  color: var(--primary-color); /* Icons in vibrant pink */
+  flex-shrink: 0;
 }
 
 .type-item span {
-    font-size: 0.9rem;
-    text-align: center;
-    font-weight: 500;
-    /* RESPONSIVE: Ensure text in type item wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: 500;
+  /* RESPONSIVE: Ensure text in type item wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .social-platforms {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 2rem;
-    /* RESPONSIVE: Ensure social platform buttons wrap and align */
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+  /* RESPONSIVE: Ensure social platform buttons wrap and align */
+  justify-content: center;
 }
 
 /* Social platform links as cute pastel buttons */
 .social-platforms a {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.7rem 1.2rem;
-    border-radius: 25px; /* More rounded for cute button look */
-    background-color: var(--accent-color-blue); /* Soft blue button */
-    color: var(--text-dark); /* Dark text for readability */
-    font-weight: 600;
-    transition: var(--transition);
-    box-shadow: 0 4px 10px rgba(173, 216, 230, 0.4);
-    /* RESPONSIVE: Prevent buttons from shrinking too much and allow text wrapping */
-    flex-shrink: 0;
-    white-space: nowrap; /* Prevent text from wrapping by default, but allow if very constrained */
-    min-width: fit-content; /* Ensure button doesn't get smaller than its content */
-    box-sizing: border-box; /* Include padding in button width */
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 25px; /* More rounded for cute button look */
+  background-color: var(--accent-color-blue); /* Soft blue button */
+  color: var(--text-dark); /* Dark text for readability */
+  font-weight: 600;
+  transition: var(--transition);
+  box-shadow: 0 4px 10px rgba(173, 216, 230, 0.4);
+  /* RESPONSIVE: Prevent buttons from shrinking too much and allow text wrapping */
+  flex-shrink: 0;
+  white-space: nowrap; /* Prevent text from wrapping by default, but allow if very constrained */
+  min-width: fit-content; /* Ensure button doesn't get smaller than its content */
+  box-sizing: border-box; /* Include padding in button width */
 }
 
 .social-platforms a:hover {
-    background-color: var(--primary-color); /* Hover to vibrant pink */
-    color: var(--text-light); /* White text on hover */
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(255, 192, 203, 0.6);
+  background-color: var(--primary-color); /* Hover to vibrant pink */
+  color: var(--text-light); /* White text on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(255, 192, 203, 0.6);
 }
 
 .social-platforms a i {
-    font-size: 1.1rem;
-    color: var(--text-dark); /* Icon color matches text for consistency */
-    transition: var(--transition);
-    flex-shrink: 0;
+  font-size: 1.1rem;
+  color: var(--text-dark); /* Icon color matches text for consistency */
+  transition: var(--transition);
+  flex-shrink: 0;
 }
 
 .social-platforms a:hover i {
-    color: var(--text-light); /* Icon becomes white on hover */
+  color: var(--text-light); /* Icon becomes white on hover */
 }
 
 .collab-image {
-    flex: 1;
-    position: relative;
-    padding: 1.5rem; /* Padding to create space for the decorative border */
-    background-color: var(--accent-color-yellow); /* Solid vibrant yellow border effect */
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-hover); /* More prominent shadow for the image */
-    /* RESPONSIVE: Ensure image container scales and has a max width */
-    max-width: 500px; /* Limit max width for the image container */
-    margin: 0 auto; /* Center image container when stacked */
-    box-sizing: border-box; /* Include padding in the width */
+  flex: 1;
+  position: relative;
+  padding: 1.5rem; /* Padding to create space for the decorative border */
+  background-color: var(
+    --accent-color-yellow
+  ); /* Solid vibrant yellow border effect */
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-hover); /* More prominent shadow for the image */
+  /* RESPONSIVE: Ensure image container scales and has a max width */
+  max-width: 500px; /* Limit max width for the image container */
+  margin: 0 auto; /* Center image container when stacked */
+  box-sizing: border-box; /* Include padding in the width */
 }
 
-.collab-image::before { /* Decorative inner border/frame */
-    content: '';
-    position: absolute;
-    inset: 5px; /* Controls the thickness of the inner border */
-    background: var(--light-color); /* White background inside the frame */
-    border-radius: calc(var(--border-radius) - 5px); /* Slightly smaller inner border radius */
-    z-index: 1;
+.collab-image::before {
+  /* Decorative inner border/frame */
+  content: "";
+  position: absolute;
+  inset: 5px; /* Controls the thickness of the inner border */
+  background: var(--light-color); /* White background inside the frame */
+  border-radius: calc(
+    var(--border-radius) - 5px
+  ); /* Slightly smaller inner border radius */
+  z-index: 1;
 }
 
 .collab-image img {
-    width: 100%;
-    height: 350px; /* Fixed height for consistency */
-    object-fit: cover; /* Ensures image covers the area nicely */
-    border-radius: calc(var(--border-radius) - 5px); /* Match inner border radius */
-    position: relative;
-    z-index: 2; /* Ensures image is on top of the 'before' pseudo-element */
-    display: block; /* Remove extra space below image */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Soft shadow on the image itself */
-    /* RESPONSIVE: Make image height more flexible */
-    height: auto;
-    min-height: 200px; /* Minimum height for image */
-    max-height: 350px; /* Max height to maintain proportion */
+  width: 100%;
+  height: 350px; /* Fixed height for consistency */
+  object-fit: cover; /* Ensures image covers the area nicely */
+  border-radius: calc(
+    var(--border-radius) - 5px
+  ); /* Match inner border radius */
+  position: relative;
+  z-index: 2; /* Ensures image is on top of the 'before' pseudo-element */
+  display: block; /* Remove extra space below image */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Soft shadow on the image itself */
+  /* RESPONSIVE: Make image height more flexible */
+  height: auto;
+  min-height: 200px; /* Minimum height for image */
+  max-height: 350px; /* Max height to maintain proportion */
 }
 
 /* Responsive Styles */
 @media (max-width: 992px) {
-    .collaboration-content {
-        flex-direction: column; /* Stack collaboration content vertically */
-        gap: 2rem; /* Reduce gap when stacked */
-        padding: 1.5rem; /* Adjust padding */
-    }
-    
-    .collab-image {
-        order: -1; /* Move image above text on smaller screens */
-        margin-bottom: 2rem;
-        width: 100%; /* Ensure image takes full width */
-        max-width: 450px; /* Adjust max-width for image when stacked */
-    }
+  .collaboration-content {
+    flex-direction: column; /* Stack collaboration content vertically */
+    gap: 2rem; /* Reduce gap when stacked */
+    padding: 1.5rem; /* Adjust padding */
+  }
 
-    .collab-image img {
-        height: auto; /* Allow height to adjust naturally */
-        max-height: 300px; /* Reduce max height for tablets */
-    }
+  .collab-image {
+    order: -1; /* Move image above text on smaller screens */
+    margin-bottom: 2rem;
+    width: 100%; /* Ensure image takes full width */
+    max-width: 450px; /* Adjust max-width for image when stacked */
+  }
 
-    .collab-text {
-        text-align: center; /* Center text content when stacked */
-    }
+  .collab-image img {
+    height: auto; /* Allow height to adjust naturally */
+    max-height: 300px; /* Reduce max height for tablets */
+  }
 
-    .collab-benefits ul {
-        align-items: center; /* Center list items if not already */
-    }
-    
-    .collab-benefits li {
-        justify-content: center; /* Center each list item horizontally */
-    }
+  .collab-text {
+    text-align: center; /* Center text content when stacked */
+  }
 
-    .types-grid {
-        justify-content: center; /* Center items in the grid */
-    }
+  .collab-benefits ul {
+    align-items: center; /* Center list items if not already */
+  }
+
+  .collab-benefits li {
+    justify-content: center; /* Center each list item horizontally */
+  }
+
+  .types-grid {
+    justify-content: center; /* Center items in the grid */
+  }
 }
 
 @media (max-width: 768px) {
-    .services-hero {
-        padding: 8rem 0 3rem;
-    }
+  .services-hero {
+    padding: 8rem 0 3rem;
+  }
 
-    .services-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Allow smaller card min-width */
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-    }
+  .services-grid {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(280px, 1fr)
+    ); /* Allow smaller card min-width */
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 
-    .service-card {
-        max-width: 350px; /* Adjust max width for tablets */
-        padding: 1.5rem; /* Slightly reduce padding */
-    }
+  .service-card {
+    max-width: 350px; /* Adjust max width for tablets */
+    padding: 1.5rem; /* Slightly reduce padding */
+  }
 
-    .service-title {
-        font-size: 1.4rem; /* Slightly smaller title */
-    }
+  .service-title {
+    font-size: 1.4rem; /* Slightly smaller title */
+  }
 
-    .service-icon {
-        font-size: 2.5rem; /* Smaller icon size */
-        margin-bottom: 1rem;
-    }
+  .service-icon {
+    font-size: 2.5rem; /* Smaller icon size */
+    margin-bottom: 1rem;
+  }
 
-    .service-description {
-        font-size: 0.95rem; /* Slightly smaller description font size */
-    }
+  .service-description {
+    font-size: 0.95rem; /* Slightly smaller description font size */
+  }
 
-    .service-features li {
-        font-size: 0.95rem; /* Slightly smaller list item font size */
-    }
+  .service-features li {
+    font-size: 0.95rem; /* Slightly smaller list item font size */
+  }
 
-    .brand-collaboration {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-    }
+  .brand-collaboration {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 
-    .collaboration-content {
-        padding: 1.2rem; /* Reduce padding for collaboration content */
-        gap: 1.5rem; /* Reduce gap */
-    }
+  .collaboration-content {
+    padding: 1.2rem; /* Reduce padding for collaboration content */
+    gap: 1.5rem; /* Reduce gap */
+  }
 
-    .collab-text h3 {
-        font-size: 1.5rem; /* Smaller heading */
-    }
+  .collab-text h3 {
+    font-size: 1.5rem; /* Smaller heading */
+  }
 
-    .collab-text p {
-        font-size: 0.95rem;
-    }
+  .collab-text p {
+    font-size: 0.95rem;
+  }
 
-    .collab-benefits h4,
-    .collab-types h4 {
-        font-size: 1.2rem;
-    }
+  .collab-benefits h4,
+  .collab-types h4 {
+    font-size: 1.2rem;
+  }
 
-    .collab-benefits li {
-        font-size: 0.9rem;
-    }
+  .collab-benefits li {
+    font-size: 0.9rem;
+  }
 
-    .types-grid {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust minmax for smaller screens */
-        gap: 0.8rem; /* Reduce gap for type items */
-    }
+  .types-grid {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(100px, 1fr)
+    ); /* Adjust minmax for smaller screens */
+    gap: 0.8rem; /* Reduce gap for type items */
+  }
 
-    .type-item {
-        padding: 0.8rem; /* Reduce padding for type items */
-        max-width: 150px;
-    }
+  .type-item {
+    padding: 0.8rem; /* Reduce padding for type items */
+    max-width: 150px;
+  }
 
-    .type-item i {
-        font-size: 1.5rem;
-    }
+  .type-item i {
+    font-size: 1.5rem;
+  }
 
-    .type-item span {
-        font-size: 0.85rem;
-    }
+  .type-item span {
+    font-size: 0.85rem;
+  }
 
-    .social-platforms {
-        flex-direction: column; /* Stack social buttons vertically */
-        align-items: center; /* Center buttons when stacked */
-        gap: 0.8rem; /* Keep gap consistent */
-    }
+  .social-platforms {
+    flex-direction: column; /* Stack social buttons vertically */
+    align-items: center; /* Center buttons when stacked */
+    gap: 0.8rem; /* Keep gap consistent */
+  }
 
-    .social-platforms a {
-        width: 100%; /* Make buttons full width when stacked */
-        max-width: 250px; /* Limit max width of individual stacked buttons */
-        padding: 0.6rem 1rem; /* Adjust padding */
-        font-size: 1rem; /* Make button text slightly larger for easier tapping */
-        white-space: normal; /* Allow text to wrap within buttons if necessary */
-    }
+  .social-platforms a {
+    width: 100%; /* Make buttons full width when stacked */
+    max-width: 250px; /* Limit max width of individual stacked buttons */
+    padding: 0.6rem 1rem; /* Adjust padding */
+    font-size: 1rem; /* Make button text slightly larger for easier tapping */
+    white-space: normal; /* Allow text to wrap within buttons if necessary */
+  }
 
-    .social-platforms a i {
-        font-size: 1rem; /* Smaller icon size for buttons */
-    }
+  .social-platforms a i {
+    font-size: 1rem; /* Smaller icon size for buttons */
+  }
 }
 
 @media (max-width: 576px) {
-    .services-hero {
-        padding: 6rem 0 2rem;
-    }
+  .services-hero {
+    padding: 6rem 0 2rem;
+  }
 
-    .services-grid {
-        grid-template-columns: 1fr; /* Single column on very small screens */
-        padding-left: 0.2rem;
-        padding-right: 0.2rem;
-    }
+  .services-grid {
+    grid-template-columns: 1fr; /* Single column on very small screens */
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+  }
 
-    .service-card {
-        margin: 0 auto; /* Center individual cards when stacked */
-        max-width: 300px; /* Reduce max-width for phone screens */
-        padding: 1.2rem; /* Reduce padding on very small screens */
-    }
+  .service-card {
+    margin: 0 auto; /* Center individual cards when stacked */
+    max-width: 300px; /* Reduce max-width for phone screens */
+    padding: 1.2rem; /* Reduce padding on very small screens */
+  }
 
-    .service-icon {
-        font-size: 2.2rem; /* Further reduce icon size */
-        margin-bottom: 0.8rem;
-    }
+  .service-icon {
+    font-size: 2.2rem; /* Further reduce icon size */
+    margin-bottom: 0.8rem;
+  }
 
-    .service-title {
-        font-size: 1.2rem; /* Further reduce title font size */
-    }
+  .service-title {
+    font-size: 1.2rem; /* Further reduce title font size */
+  }
 
-    .service-description {
-        font-size: 0.9rem;
-    }
+  .service-description {
+    font-size: 0.9rem;
+  }
 
-    .service-features li {
-        font-size: 0.88rem;
-    }
+  .service-features li {
+    font-size: 0.88rem;
+  }
 
-    .brand-collaboration {
-        padding-left: 0.2rem;
-        padding-right: 0.2rem;
-    }
+  .brand-collaboration {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+  }
 
-    .collaboration-content {
-        padding: 1rem; /* Further reduce padding for collaboration content */
-        gap: 1rem; /* Further reduce gap */
-    }
+  .collaboration-content {
+    padding: 1rem; /* Further reduce padding for collaboration content */
+    gap: 1rem; /* Further reduce gap */
+  }
 
-    .collab-image {
-        max-width: 300px; /* Even smaller max width for image when stacked */
-        margin-bottom: 1.5rem;
-        padding: 1rem; /* Reduce padding around the image frame */
-    }
+  .collab-image {
+    max-width: 300px; /* Even smaller max width for image when stacked */
+    margin-bottom: 1.5rem;
+    padding: 1rem; /* Reduce padding around the image frame */
+  }
 
-    .collab-image::before {
-        inset: 3px; /* Smaller inner border thickness */
-        border-radius: calc(var(--border-radius) - 3px);
-    }
+  .collab-image::before {
+    inset: 3px; /* Smaller inner border thickness */
+    border-radius: calc(var(--border-radius) - 3px);
+  }
 
-    .collab-image img {
-        max-height: 250px; /* Further reduce max height for very small screens */
-        border-radius: calc(var(--border-radius) - 3px);
-    }
+  .collab-image img {
+    max-height: 250px; /* Further reduce max height for very small screens */
+    border-radius: calc(var(--border-radius) - 3px);
+  }
 
-    .collab-text h3 {
-        font-size: 1.3rem;
-    }
+  .collab-text h3 {
+    font-size: 1.3rem;
+  }
 
-    .collab-text p {
-        font-size: 0.88rem;
-    }
+  .collab-text p {
+    font-size: 0.88rem;
+  }
 
-    .collab-benefits h4,
-    .collab-types h4 {
-        font-size: 1.1rem;
-    }
+  .collab-benefits h4,
+  .collab-types h4 {
+    font-size: 1.1rem;
+  }
 
-    .collab-benefits li {
-        font-size: 0.85rem;
-    }
+  .collab-benefits li {
+    font-size: 0.85rem;
+  }
 
-    .types-grid {
-        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Even smaller minmax for type items */
-        gap: 0.6rem;
-    }
+  .types-grid {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(80px, 1fr)
+    ); /* Even smaller minmax for type items */
+    gap: 0.6rem;
+  }
 
-    .type-item {
-        padding: 0.6rem;
-        max-width: 120px;
-    }
+  .type-item {
+    padding: 0.6rem;
+    max-width: 120px;
+  }
 
-    .type-item i {
-        font-size: 1.3rem;
-    }
+  .type-item i {
+    font-size: 1.3rem;
+  }
 
-    .type-item span {
-        font-size: 0.75rem;
-    }
+  .type-item span {
+    font-size: 0.75rem;
+  }
 
-    .social-platforms a {
-        max-width: 200px; /* Further restrict max-width for social buttons */
-        font-size: 0.9rem;
-    }
+  .social-platforms a {
+    max-width: 200px; /* Further restrict max-width for social buttons */
+    font-size: 0.9rem;
+  }
 }
 
 /* Specific adjustments for very small mobile devices like iPhone SE (375px width) */
 @media (max-width: 375px) {
-    .services-hero {
-        padding: 5rem 0 1.5rem;
-    }
+  .services-hero {
+    padding: 5rem 0 1.5rem;
+  }
 
-    .services-grid {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-    }
+  .services-grid {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 
-    .service-card {
-        max-width: 280px;
-        padding: 1rem;
-    }
+  .service-card {
+    max-width: 280px;
+    padding: 1rem;
+  }
 
-    .service-icon {
-        font-size: 2rem;
-        margin-bottom: 0.6rem;
-    }
+  .service-icon {
+    font-size: 2rem;
+    margin-bottom: 0.6rem;
+  }
 
-    .service-title {
-        font-size: 1.1rem;
-    }
+  .service-title {
+    font-size: 1.1rem;
+  }
 
-    .service-description {
-        font-size: 0.85rem;
-    }
+  .service-description {
+    font-size: 0.85rem;
+  }
 
-    .service-features li {
-        font-size: 0.8rem;
-    }
+  .service-features li {
+    font-size: 0.8rem;
+  }
 
-    .brand-collaboration {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-    }
+  .brand-collaboration {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 
-    .collaboration-content {
-        padding: 0.8rem;
-    }
+  .collaboration-content {
+    padding: 0.8rem;
+  }
 
-    .collab-image {
-        max-width: 280px;
-        margin-bottom: 1rem;
-        padding: 0.8rem;
-    }
+  .collab-image {
+    max-width: 280px;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+  }
 
-    .collab-image::before {
-        inset: 2px;
-        border-radius: calc(var(--border-radius) - 2px);
-    }
+  .collab-image::before {
+    inset: 2px;
+    border-radius: calc(var(--border-radius) - 2px);
+  }
 
-    .collab-image img {
-        max-height: 200px;
-        border-radius: calc(var(--border-radius) - 2px);
-    }
+  .collab-image img {
+    max-height: 200px;
+    border-radius: calc(var(--border-radius) - 2px);
+  }
 
-    .collab-text h3 {
-        font-size: 1.2rem;
-    }
+  .collab-text h3 {
+    font-size: 1.2rem;
+  }
 
-    .collab-text p {
-        font-size: 0.8rem;
-    }
+  .collab-text p {
+    font-size: 0.8rem;
+  }
 
-    .collab-benefits h4,
-    .collab-types h4 {
-        font-size: 1rem;
-    }
+  .collab-benefits h4,
+  .collab-types h4 {
+    font-size: 1rem;
+  }
 
-    .collab-benefits li {
-        font-size: 0.8rem;
-    }
+  .collab-benefits li {
+    font-size: 0.8rem;
+  }
 
-    .types-grid {
-        grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
-        gap: 0.5rem;
-    }
+  .types-grid {
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    gap: 0.5rem;
+  }
 
-    .type-item {
-        padding: 0.5rem;
-        max-width: 100px;
-    }
+  .type-item {
+    padding: 0.5rem;
+    max-width: 100px;
+  }
 
-    .type-item i {
-        font-size: 1.2rem;
-    }
+  .type-item i {
+    font-size: 1.2rem;
+  }
 
-    .type-item span {
-        font-size: 0.7rem;
-    }
+  .type-item span {
+    font-size: 0.7rem;
+  }
 
-    .social-platforms a {
-        max-width: 180px;
-        font-size: 0.85rem;
-        padding: 0.5rem 0.8rem;
-    }
+  .social-platforms a {
+    max-width: 180px;
+    font-size: 0.85rem;
+    padding: 0.5rem 0.8rem;
+  }
 }

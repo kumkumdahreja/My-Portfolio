@@ -1,622 +1,636 @@
 /* Resume Hero */
 .resume-hero {
-    padding: 10rem 0 5rem;
-    text-align: center;
-    background-color: var(--light-secondary); /* A very light, subtle off-white */
+  padding: 10rem 0 5rem;
+  text-align: center;
+  background-color: var(--light-secondary); /* A very light, subtle off-white */
 }
 
 .resume-hero .section-title {
-    color: var(--text-dark);
-    /* RESPONSIVE: Ensure title text wraps on smaller screens */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  color: var(--text-dark);
+  /* RESPONSIVE: Ensure title text wraps on smaller screens */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .resume-hero .section-title::after {
-    background-color: var(--primary-color);
+  background-color: var(--primary-color);
 }
 
 /* Experience Section */
 .experience-section {
-    padding: 5rem 0;
-    background-color: var(--light-color); /* A very subtle, almost white color */
-    /* RESPONSIVE: Add horizontal padding to prevent content from touching screen edges */
-    padding-left: 1rem;
-    padding-right: 1rem;
+  padding: 5rem 0;
+  background-color: var(--light-color); /* A very subtle, almost white color */
+  /* RESPONSIVE: Add horizontal padding to prevent content from touching screen edges */
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .section-actions {
-    margin-top: 1rem;
-    /* RESPONSIVE: Center action buttons if any */
-    text-align: center;
+  margin-top: 1rem;
+  /* RESPONSIVE: Center action buttons if any */
+  text-align: center;
 }
 
 .timeline {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem 0;
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
 }
 
 .timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50px;
-    width: 3px;
-    height: 100%;
-    background-color: var(--primary-color);
-    /* RESPONSIVE: Adjust timeline line position for smaller screens */
-    left: 20px; /* Adjusted default for better mobile fit */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50px;
+  width: 3px;
+  height: 100%;
+  background-color: var(--primary-color);
+  /* RESPONSIVE: Adjust timeline line position for smaller screens */
+  left: 20px; /* Adjusted default for better mobile fit */
 }
 
 .timeline-item {
-    position: relative;
-    margin-bottom: 3rem;
-    padding-left: 80px;
-    /* RESPONSIVE: Adjust padding for mobile to ensure content fits */
-    padding-left: 45px; /* Adjusted default for better mobile fit */
-    /* RESPONSIVE: Ensure content inside timeline-item handles overflow */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  position: relative;
+  margin-bottom: 3rem;
+  padding-left: 80px;
+  /* RESPONSIVE: Adjust padding for mobile to ensure content fits */
+  padding-left: 45px; /* Adjusted default for better mobile fit */
+  /* RESPONSIVE: Ensure content inside timeline-item handles overflow */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .timeline-date {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100px;
-    padding: 0.5rem 1rem;
-    background-color: var(--accent-color-blue);
-    color: var(--light-color);
-    border-radius: 20px;
-    font-weight: 600;
-    text-align: center;
-    box-shadow: 0 4px 15px var(--shadow);
-    /* RESPONSIVE: Adjust date position and size for mobile */
-    width: 70px; /* Smaller width for mobile */
-    padding: 0.4rem 0.8rem; /* Smaller padding */
-    font-size: 0.8rem; /* Smaller font size */
-    left: -15px; /* Move date closer to timeline line */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  padding: 0.5rem 1rem;
+  background-color: var(--accent-color-blue);
+  color: var(--light-color);
+  border-radius: 20px;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 4px 15px var(--shadow);
+  /* RESPONSIVE: Adjust date position and size for mobile */
+  width: 70px; /* Smaller width for mobile */
+  padding: 0.4rem 0.8rem; /* Smaller padding */
+  font-size: 0.8rem; /* Smaller font size */
+  left: -15px; /* Move date closer to timeline line */
 }
 
 .timeline-content {
-    background: var(--light-color);
-    padding: 1.5rem;
-    border-radius: 20px;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-    /* RESPONSIVE: Ensure content fits within its card */
-    width: 100%;
-    box-sizing: border-box; /* Include padding in width */
+  background: var(--light-color);
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  /* RESPONSIVE: Ensure content fits within its card */
+  width: 100%;
+  box-sizing: border-box; /* Include padding in width */
 }
 
 .timeline-content:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
 }
 
 .timeline-title {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: var(--text-dark);
-    /* RESPONSIVE: Ensure title text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+  /* RESPONSIVE: Ensure title text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .timeline-company {
-    font-size: 1.1rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    font-weight: 600;
-    /* RESPONSIVE: Ensure company text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-weight: 600;
+  /* RESPONSIVE: Ensure company text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .timeline-description {
-    padding-left: 1.5rem;
+  padding-left: 1.5rem;
 }
 
 .timeline-description li {
-    margin-bottom: 0.8rem;
-    position: relative;
-    color: var(--gray-color);
-    line-height: 1.7;
-    /* RESPONSIVE: Ensure list item text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  margin-bottom: 0.8rem;
+  position: relative;
+  color: var(--gray-color);
+  line-height: 1.7;
+  /* RESPONSIVE: Ensure list item text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .timeline-description li::before {
-    content: '•';
-    color: var(--accent-color-orange);
-    font-weight: bold;
-    position: absolute;
-    left: -1.5rem;
+  content: "•";
+  color: var(--accent-color-orange);
+  font-weight: bold;
+  position: absolute;
+  left: -1.5rem;
 }
 
 /* Education Section */
 .education-section {
-    padding: 5rem 0;
-    background-color: var(--accent-color-yellow); /* Sunny pastel yellow */
-    /* RESPONSIVE: Add horizontal padding */
-    padding-left: 1rem;
-    padding-right: 1rem;
+  padding: 5rem 0;
+  background-color: var(--accent-color-yellow); /* Sunny pastel yellow */
+  /* RESPONSIVE: Add horizontal padding */
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .education-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-    /* RESPONSIVE: Center grid items */
-    justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  /* RESPONSIVE: Center grid items */
+  justify-items: center;
 }
 
 .education-card {
-    background: var(--light-color);
-    padding: 1.5rem;
-    border-radius: 20px;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-    /* RESPONSIVE: Ensure cards take full width of their minmax and limit max width */
-    width: 100%;
-    max-width: 450px; /* Limit max width for readability on larger screens */
-    box-sizing: border-box; /* Include padding in the width */
+  background: var(--light-color);
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  /* RESPONSIVE: Ensure cards take full width of their minmax and limit max width */
+  width: 100%;
+  max-width: 450px; /* Limit max width for readability on larger screens */
+  box-sizing: border-box; /* Include padding in the width */
 }
 
 .education-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
 }
 
 .education-title {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: var(--text-dark);
-    /* RESPONSIVE: Ensure title text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+  /* RESPONSIVE: Ensure title text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .education-institution {
-    font-size: 1.1rem;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    /* RESPONSIVE: Ensure institution text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  /* RESPONSIVE: Ensure institution text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .education-duration {
-    color: var(--gray-color);
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-    /* RESPONSIVE: Ensure duration text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  color: var(--gray-color);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  /* RESPONSIVE: Ensure duration text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .education-description {
-    padding-left: 1.5rem;
+  padding-left: 1.5rem;
 }
 
 .education-description li {
-    margin-bottom: 0.8rem;
-    position: relative;
-    color: var(--gray-color);
-    line-height: 1.7;
-    /* RESPONSIVE: Ensure list item text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  margin-bottom: 0.8rem;
+  position: relative;
+  color: var(--gray-color);
+  line-height: 1.7;
+  /* RESPONSIVE: Ensure list item text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .education-description li::before {
-    content: '•';
-    color: var(--accent-color-blue);
-    font-weight: bold;
-    position: absolute;
-    left: -1.5rem;
+  content: "•";
+  color: var(--accent-color-blue);
+  font-weight: bold;
+  position: absolute;
+  left: -1.5rem;
 }
 
 /* Certificates Section */
 .certificates-section {
-    padding: 5rem 0;
-    background-color: var(--accent-color-purple); /* Cheerful lavender */
-    /* RESPONSIVE: Add horizontal padding */
-    padding-left: 1rem;
-    padding-right: 1rem;
+  padding: 5rem 0;
+  background-color: var(--accent-color-purple); /* Cheerful lavender */
+  /* RESPONSIVE: Add horizontal padding */
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .certificates-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-    /* RESPONSIVE: Center grid items */
-    justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  /* RESPONSIVE: Center grid items */
+  justify-items: center;
 }
 
 .certificate-card {
-    background: var(--light-color);
-    padding: 1.5rem;
-    border-radius: 20px;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-    /* RESPONSIVE: Ensure cards take full width of their minmax and limit max width */
-    width: 100%;
-    max-width: 350px; /* Limit max width for readability on larger screens */
-    box-sizing: border-box; /* Include padding in the width */
+  background: var(--light-color);
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  /* RESPONSIVE: Ensure cards take full width of their minmax and limit max width */
+  width: 100%;
+  max-width: 350px; /* Limit max width for readability on larger screens */
+  box-sizing: border-box; /* Include padding in the width */
 }
 
 .certificate-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
 }
 
 .certificate-title {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: var(--text-dark);
-    /* RESPONSIVE: Ensure title text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+  /* RESPONSIVE: Ensure title text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .certificate-issuer {
-    color: var(--primary-color);
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    /* RESPONSIVE: Ensure issuer text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  /* RESPONSIVE: Ensure issuer text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .certificate-date {
-    color: var(--gray-color);
-    font-size: 0.9rem;
-    /* RESPONSIVE: Ensure date text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  color: var(--gray-color);
+  font-size: 0.9rem;
+  /* RESPONSIVE: Ensure date text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Skills Section */
 .skills-section {
-    padding: 5rem 0;
-    background-color: var(--primary-light); /* Lightest pink */
-    /* RESPONSIVE: Add horizontal padding */
-    padding-left: 1rem;
-    padding-right: 1rem;
+  padding: 5rem 0;
+  background-color: var(--primary-light); /* Lightest pink */
+  /* RESPONSIVE: Add horizontal padding */
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .skills-categories {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-    /* RESPONSIVE: Center grid items */
-    justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  /* RESPONSIVE: Center grid items */
+  justify-items: center;
 }
 
 .skills-category {
-    background: var(--light-color);
-    padding: 1.5rem;
-    border-radius: 20px;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-    /* RESPONSIVE: Ensure cards take full width of their minmax and limit max width */
-    width: 100%;
-    max-width: 450px; /* Limit max width for readability on larger screens */
-    box-sizing: border-box; /* Include padding in the width */
+  background: var(--light-color);
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  /* RESPONSIVE: Ensure cards take full width of their minmax and limit max width */
+  width: 100%;
+  max-width: 450px; /* Limit max width for readability on larger screens */
+  box-sizing: border-box; /* Include padding in the width */
 }
 
 .skills-category:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
 }
 
 .category-title {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-    color: var(--text-dark);
-    position: relative;
-    padding-bottom: 10px;
-    /* RESPONSIVE: Ensure title text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-dark);
+  position: relative;
+  padding-bottom: 10px;
+  /* RESPONSIVE: Ensure title text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .category-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 50px;
-    height: 3px;
-    background-color: var(--accent-color-green);
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--accent-color-green);
 }
 
 .skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-    /* RESPONSIVE: Ensure skill tags wrap without overflow */
-    justify-content: flex-start; /* Align tags to the start of the line */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  /* RESPONSIVE: Ensure skill tags wrap without overflow */
+  justify-content: flex-start; /* Align tags to the start of the line */
 }
 
 .skills-list li {
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    color: var(--text-dark);
-    transition: background-color 0.3s ease;
-    /* RESPONSIVE: Prevent tags from shrinking too much and allow text wrapping */
-    flex-shrink: 0;
-    white-space: nowrap; /* Prevent text from wrapping by default, but allow if very constrained */
-    min-width: fit-content; /* Ensure tag doesn't get smaller than its content */
-    box-sizing: border-box; /* Include padding in tag width */
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  transition: background-color 0.3s ease;
+  /* RESPONSIVE: Prevent tags from shrinking too much and allow text wrapping */
+  flex-shrink: 0;
+  white-space: nowrap; /* Prevent text from wrapping by default, but allow if very constrained */
+  min-width: fit-content; /* Ensure tag doesn't get smaller than its content */
+  box-sizing: border-box; /* Include padding in tag width */
 }
 
-.skills-list li:nth-child(6n + 1) { background-color: var(--primary-color); } /* Pink */
-.skills-list li:nth-child(6n + 2) { background-color: var(--accent-color-blue); } /* Light Blue */
-.skills-list li:nth-child(6n + 3) { background-color: var(--accent-color-green); } /* Mint Green */
-.skills-list li:nth-child(6n + 4) { background-color: var(--accent-color-purple); } /* Lavender */
-.skills-list li:nth-child(6n + 5) { background-color: var(--accent-color-orange); } /* Peach/Orange */
-.skills-list li:nth-child(6n + 0) { background-color: var(--accent-color-yellow); } /* Yellow */
-
+.skills-list li:nth-child(6n + 1) {
+  background-color: var(--primary-color);
+} /* Pink */
+.skills-list li:nth-child(6n + 2) {
+  background-color: var(--accent-color-blue);
+} /* Light Blue */
+.skills-list li:nth-child(6n + 3) {
+  background-color: var(--accent-color-green);
+} /* Mint Green */
+.skills-list li:nth-child(6n + 4) {
+  background-color: var(--accent-color-purple);
+} /* Lavender */
+.skills-list li:nth-child(6n + 5) {
+  background-color: var(--accent-color-orange);
+} /* Peach/Orange */
+.skills-list li:nth-child(6n + 0) {
+  background-color: var(--accent-color-yellow);
+} /* Yellow */
 
 /* Responsive Styles */
 @media (max-width: 992px) {
-    /* No specific changes here, general flex/grid handling suffices */
+  /* No specific changes here, general flex/grid handling suffices */
 }
 
 @media (max-width: 768px) {
-    .resume-hero {
-        padding: 8rem 0 3rem;
-    }
+  .resume-hero {
+    padding: 8rem 0 3rem;
+  }
 
-    /* Timeline adjustments */
-    .timeline::before {
-        left: 20px; /* Ensure line stays aligned on tablets */
-    }
+  /* Timeline adjustments */
+  .timeline::before {
+    left: 20px; /* Ensure line stays aligned on tablets */
+  }
 
-    .timeline-item {
-        padding-left: 45px; /* Adjust padding for event content to align with date */
-    }
+  .timeline-item {
+    padding-left: 45px; /* Adjust padding for event content to align with date */
+  }
 
-    .timeline-date {
-        left: -15px; /* Keep date aligned to the left of the line */
-        width: 70px;
-        font-size: 0.8rem;
-    }
+  .timeline-date {
+    left: -15px; /* Keep date aligned to the left of the line */
+    width: 70px;
+    font-size: 0.8rem;
+  }
 
-    .education-grid,
-    .certificates-grid,
-    .skills-categories {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Allow smaller card min-width */
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-    }
+  .education-grid,
+  .certificates-grid,
+  .skills-categories {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(280px, 1fr)
+    ); /* Allow smaller card min-width */
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 
-    .education-card,
-    .certificate-card,
-    .skills-category {
-        max-width: 350px; /* Adjust max width for tablets */
-        padding: 1.2rem; /* Slightly reduce padding */
-    }
+  .education-card,
+  .certificate-card,
+  .skills-category {
+    max-width: 350px; /* Adjust max width for tablets */
+    padding: 1.2rem; /* Slightly reduce padding */
+  }
 
-    .timeline-title,
-    .education-title,
-    .category-title {
-        font-size: 1.4rem; /* Slightly smaller title */
-    }
+  .timeline-title,
+  .education-title,
+  .category-title {
+    font-size: 1.4rem; /* Slightly smaller title */
+  }
 
-    .timeline-company,
-    .education-institution {
-        font-size: 1rem; /* Slightly smaller text */
-    }
+  .timeline-company,
+  .education-institution {
+    font-size: 1rem; /* Slightly smaller text */
+  }
 
-    .timeline-description li,
-    .education-description li {
-        font-size: 0.95rem; /* Slightly smaller description font size */
-    }
+  .timeline-description li,
+  .education-description li {
+    font-size: 0.95rem; /* Slightly smaller description font size */
+  }
 
-    .certificate-title {
-        font-size: 1.1rem;
-    }
+  .certificate-title {
+    font-size: 1.1rem;
+  }
 
-    .certificate-issuer,
-    .certificate-date {
-        font-size: 0.85rem;
-    }
+  .certificate-issuer,
+  .certificate-date {
+    font-size: 0.85rem;
+  }
 
-    .skills-list li {
-        font-size: 0.85rem; /* Slightly smaller skill tag font size */
-        padding: 0.4rem 0.9rem; /* Adjust tag padding */
-    }
+  .skills-list li {
+    font-size: 0.85rem; /* Slightly smaller skill tag font size */
+    padding: 0.4rem 0.9rem; /* Adjust tag padding */
+  }
 }
 
 @media (max-width: 576px) {
-    .resume-hero {
-        padding: 6rem 0 2rem;
-    }
+  .resume-hero {
+    padding: 6rem 0 2rem;
+  }
 
-    /* Further timeline adjustments for very small screens */
-    .timeline {
-        padding-left: 0.5rem; /* Reduce padding to give more space for content */
-        padding-right: 0.5rem;
-    }
+  /* Further timeline adjustments for very small screens */
+  .timeline {
+    padding-left: 0.5rem; /* Reduce padding to give more space for content */
+    padding-right: 0.5rem;
+  }
 
-    .timeline::before {
-        left: 15px; /* Adjust line position */
-    }
+  .timeline::before {
+    left: 15px; /* Adjust line position */
+  }
 
-    .timeline-item {
-        padding-left: 40px; /* Further reduce padding for content */
-    }
+  .timeline-item {
+    padding-left: 40px; /* Further reduce padding for content */
+  }
 
-    .timeline-date {
-        left: -10px; /* Adjust date position */
-        width: 60px; /* Further reduce date width */
-        font-size: 0.75rem; /* Further reduce date font size */
-    }
+  .timeline-date {
+    left: -10px; /* Adjust date position */
+    width: 60px; /* Further reduce date width */
+    font-size: 0.75rem; /* Further reduce date font size */
+  }
 
-    .timeline-content {
-        padding: 1rem; /* Reduce content padding */
-    }
+  .timeline-content {
+    padding: 1rem; /* Reduce content padding */
+  }
 
-    .timeline-title {
-        font-size: 1.3rem; /* Smaller title font size */
-    }
+  .timeline-title {
+    font-size: 1.3rem; /* Smaller title font size */
+  }
 
-    .timeline-company {
-        font-size: 0.95rem;
-    }
+  .timeline-company {
+    font-size: 0.95rem;
+  }
 
-    .timeline-description li {
-        font-size: 0.9rem;
-    }
+  .timeline-description li {
+    font-size: 0.9rem;
+  }
 
-    .education-grid,
-    .certificates-grid,
-    .skills-categories {
-        grid-template-columns: 1fr; /* Single column on very small screens */
-        padding-left: 0.2rem;
-        padding-right: 0.2rem;
-    }
+  .education-grid,
+  .certificates-grid,
+  .skills-categories {
+    grid-template-columns: 1fr; /* Single column on very small screens */
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+  }
 
-    .education-card,
-    .certificate-card,
-    .skills-category {
-        margin: 0 auto; /* Center individual cards when stacked */
-        max-width: 300px; /* Reduce max-width for phone screens */
-        padding: 1rem; /* Further reduce padding */
-    }
+  .education-card,
+  .certificate-card,
+  .skills-category {
+    margin: 0 auto; /* Center individual cards when stacked */
+    max-width: 300px; /* Reduce max-width for phone screens */
+    padding: 1rem; /* Further reduce padding */
+  }
 
-    .education-title,
-    .category-title {
-        font-size: 1.2rem;
-    }
+  .education-title,
+  .category-title {
+    font-size: 1.2rem;
+  }
 
-    .education-institution {
-        font-size: 0.9rem;
-    }
+  .education-institution {
+    font-size: 0.9rem;
+  }
 
-    .education-duration {
-        font-size: 0.85rem;
-    }
+  .education-duration {
+    font-size: 0.85rem;
+  }
 
-    .education-description li {
-        font-size: 0.88rem;
-    }
+  .education-description li {
+    font-size: 0.88rem;
+  }
 
-    .certificate-title {
-        font-size: 1.05rem;
-    }
+  .certificate-title {
+    font-size: 1.05rem;
+  }
 
-    .certificate-issuer,
-    .certificate-date {
-        font-size: 0.8rem;
-    }
+  .certificate-issuer,
+  .certificate-date {
+    font-size: 0.8rem;
+  }
 
-    .skills-list {
-        gap: 0.6rem; /* Reduce tag gap for tighter fit */
-    }
+  .skills-list {
+    gap: 0.6rem; /* Reduce tag gap for tighter fit */
+  }
 
-    .skills-list li {
-        font-size: 0.8rem; /* Smaller skill tag font size */
-        padding: 0.3rem 0.7rem; /* Smaller tag padding */
-        white-space: normal; /* Allow text to wrap within skill buttons if needed */
-    }
+  .skills-list li {
+    font-size: 0.8rem; /* Smaller skill tag font size */
+    padding: 0.3rem 0.7rem; /* Smaller tag padding */
+    white-space: normal; /* Allow text to wrap within skill buttons if needed */
+  }
 }
 
 /* Specific adjustments for very small mobile devices like iPhone SE (375px width) */
 @media (max-width: 375px) {
-    .resume-hero {
-        padding: 5rem 0 1.5rem;
-    }
+  .resume-hero {
+    padding: 5rem 0 1.5rem;
+  }
 
-    .experience-section,
-    .education-section,
-    .certificates-section,
-    .skills-section {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-    }
+  .experience-section,
+  .education-section,
+  .certificates-section,
+  .skills-section {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 
-    .timeline::before {
-        left: 10px; /* Minimal left margin for the line */
-    }
+  .timeline::before {
+    left: 10px; /* Minimal left margin for the line */
+  }
 
-    .timeline-item {
-        padding-left: 30px; /* Minimal padding for event content */
-    }
+  .timeline-item {
+    padding-left: 30px; /* Minimal padding for event content */
+  }
 
-    .timeline-date {
-        left: -5px; /* Minimal left offset for the date */
-        width: 55px; /* Smallest date width */
-        font-size: 0.7rem; /* Smallest date font size */
-        padding: 0.3rem 0.5rem;
-    }
+  .timeline-date {
+    left: -5px; /* Minimal left offset for the date */
+    width: 55px; /* Smallest date width */
+    font-size: 0.7rem; /* Smallest date font size */
+    padding: 0.3rem 0.5rem;
+  }
 
-    .timeline-content {
-        padding: 0.8rem; /* Minimal content padding */
-    }
+  .timeline-content {
+    padding: 0.8rem; /* Minimal content padding */
+  }
 
-    .timeline-title {
-        font-size: 1.1rem;
-    }
+  .timeline-title {
+    font-size: 1.1rem;
+  }
 
-    .timeline-company {
-        font-size: 0.85rem;
-    }
+  .timeline-company {
+    font-size: 0.85rem;
+  }
 
-    .timeline-description li {
-        font-size: 0.8rem;
-    }
+  .timeline-description li {
+    font-size: 0.8rem;
+  }
 
-    .education-card,
-    .certificate-card,
-    .skills-category {
-        max-width: 280px; /* Even smaller max width for tiny screens */
-        padding: 0.8rem;
-    }
+  .education-card,
+  .certificate-card,
+  .skills-category {
+    max-width: 280px; /* Even smaller max width for tiny screens */
+    padding: 0.8rem;
+  }
 
-    .education-title,
-    .category-title {
-        font-size: 1.05rem;
-    }
+  .education-title,
+  .category-title {
+    font-size: 1.05rem;
+  }
 
-    .education-institution {
-        font-size: 0.8rem;
-    }
+  .education-institution {
+    font-size: 0.8rem;
+  }
 
-    .education-duration {
-        font-size: 0.75rem;
-    }
+  .education-duration {
+    font-size: 0.75rem;
+  }
 
-    .education-description li {
-        font-size: 0.78rem;
-    }
+  .education-description li {
+    font-size: 0.78rem;
+  }
 
-    .certificate-title {
-        font-size: 1rem;
-    }
+  .certificate-title {
+    font-size: 1rem;
+  }
 
-    .certificate-issuer,
-    .certificate-date {
-        font-size: 0.75rem;
-    }
+  .certificate-issuer,
+  .certificate-date {
+    font-size: 0.75rem;
+  }
 
-    .skills-list {
-        gap: 0.5rem;
-    }
+  .skills-list {
+    gap: 0.5rem;
+  }
 
-    .skills-list li {
-        font-size: 0.7rem;
-        padding: 0.25rem 0.6rem;
-    }
+  .skills-list li {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.6rem;
+  }
 }

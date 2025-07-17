@@ -1,591 +1,601 @@
 /* Hero Section */
 .hero {
-    padding: 12rem 0 5rem;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    background-color: var(--light-color); /* A very soft, almost white pastel base */
+  padding: 12rem 0 5rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: var(
+    --light-color
+  ); /* A very soft, almost white pastel base */
 }
 
 .hero .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 3rem;
-    /* RESPONSIVE: Allow content to wrap on smaller screens */
-    flex-wrap: wrap; /* Added for responsiveness */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  /* RESPONSIVE: Allow content to wrap on smaller screens */
+  flex-wrap: wrap; /* Added for responsiveness */
 }
 
 .hero-content {
-    flex: 1;
-    /* RESPONSIVE: Ensure content takes full width on smaller screens */
-    min-width: 300px; /* Ensures content doesn't shrink too much */
+  flex: 1;
+  /* RESPONSIVE: Ensure content takes full width on smaller screens */
+  min-width: 300px; /* Ensures content doesn't shrink too much */
 }
 
 .hero-subtitle {
-    font-size: 1.2rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    /* RESPONSIVE: Ensure text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  /* RESPONSIVE: Ensure text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .hero-title {
-    font-size: 3.5rem;
-    margin-bottom: 1.5rem;
-    color: var(--text-dark);
-    line-height: 1.2;
-    /* RESPONSIVE: Ensure text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-dark);
+  line-height: 1.2;
+  /* RESPONSIVE: Ensure text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .hero-role {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-    color: var(--gray-color);
-    font-weight: 400;
-    /* RESPONSIVE: Ensure text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--gray-color);
+  font-weight: 400;
+  /* RESPONSIVE: Ensure text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .hero-description {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-    color: var(--gray-color);
-    max-width: 600px;
-    line-height: 1.8;
-    /* RESPONSIVE: Ensure text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: var(--gray-color);
+  max-width: 600px;
+  line-height: 1.8;
+  /* RESPONSIVE: Ensure text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .hero-buttons {
-    display: flex;
-    gap: 1.5rem;
-    margin-top: 2rem;
-    /* RESPONSIVE: Allow buttons to wrap and center on smaller screens */
-    flex-wrap: wrap;
-    justify-content: flex-start; /* Default alignment */
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  /* RESPONSIVE: Allow buttons to wrap and center on smaller screens */
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Default alignment */
 }
 
 .hero-image {
-    flex: 1;
-    position: relative;
-    /* RESPONSIVE: Ensure image takes full width on smaller screens, and centers */
-    min-width: 280px; /* Ensures image doesn't shrink too much */
-    display: flex; /* For centering the image-wrapper */
-    justify-content: center; /* For centering the image-wrapper */
-    align-items: center; /* For centering the image-wrapper */
+  flex: 1;
+  position: relative;
+  /* RESPONSIVE: Ensure image takes full width on smaller screens, and centers */
+  min-width: 280px; /* Ensures image doesn't shrink too much */
+  display: flex; /* For centering the image-wrapper */
+  justify-content: center; /* For centering the image-wrapper */
+  align-items: center; /* For centering the image-wrapper */
 }
 
 .image-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto; /* Ensures centering if max-width is hit */
-    border-radius: 50%; /* Circular shape */
-    overflow: hidden;
-    box-shadow:
-        0 10px 30px rgba(255, 192, 203, 0.25),
-        0 0 0 10px rgba(173, 216, 230, 0.15);
-    transition: var(--transition);
-    aspect-ratio: 1/1; /* Ensures perfect circle */
-    border: 5px solid rgba(255, 192, 203, 0.3);
-    transform-style: preserve-3d;
-    perspective: 1000px;
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto; /* Ensures centering if max-width is hit */
+  border-radius: 50%; /* Circular shape */
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(255, 192, 203, 0.25),
+    0 0 0 10px rgba(173, 216, 230, 0.15);
+  transition: var(--transition);
+  aspect-ratio: 1/1; /* Ensures perfect circle */
+  border: 5px solid rgba(255, 192, 203, 0.3);
+  transform-style: preserve-3d;
+  perspective: 1000px;
 }
 
 .image-wrapper::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 192, 203, 0.05);
-    z-index: 1;
-    mix-blend-mode: overlay;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 192, 203, 0.05);
+  z-index: 1;
+  mix-blend-mode: overlay;
 }
 
 .image-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition:
-        transform 0.5s ease,
-        filter 0.3s ease;
-    transform: scale(1.05);
-    filter: grayscale(10%) contrast(110%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease, filter 0.3s ease;
+  transform: scale(1.05);
+  filter: grayscale(10%) contrast(110%);
 }
 
 /* Hover Effects */
 .image-wrapper:hover {
-    box-shadow:
-        0 15px 45px rgba(255, 192, 203, 0.4),
-        0 0 0 15px rgba(173, 216, 230, 0.25);
-    transform: translateY(-5px) rotateY(10deg);
+  box-shadow: 0 15px 45px rgba(255, 192, 203, 0.4),
+    0 0 0 15px rgba(173, 216, 230, 0.25);
+  transform: translateY(-5px) rotateY(10deg);
 }
 
 .image-wrapper:hover img {
-    transform: scale(1.1);
-    filter: grayscale(0%) contrast(120%);
+  transform: scale(1.1);
+  filter: grayscale(0%) contrast(120%);
 }
 
 /* Animation for subtle floating effect */
 @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .image-wrapper {
-    animation: float 6s ease-in-out infinite;
+  animation: float 6s ease-in-out infinite;
 }
 
 /* About Section */
 .about-section {
-    padding: 5rem 0;
-    background-color: var(--primary-light);
+  padding: 5rem 0;
+  background-color: var(--primary-light);
 }
 
 .about-content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
-    align-items: center;
-    background: var(--glass-bg);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border-radius: var(--border-radius);
-    border: var(--glass-border);
-    box-shadow: var(--shadow);
-    padding: 3rem;
-    /* RESPONSIVE: Allow grid columns to stack on smaller screens */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted for responsiveness */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  align-items: center;
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: var(--border-radius);
+  border: var(--glass-border);
+  box-shadow: var(--shadow);
+  padding: 3rem;
+  /* RESPONSIVE: Allow grid columns to stack on smaller screens */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* Adjusted for responsiveness */
 }
 
-
 .about-text p {
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: var(--gray-color);
-    /* RESPONSIVE: Ensure text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--gray-color);
+  /* RESPONSIVE: Ensure text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .personal-info {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 .info-item {
-    display: flex;
-    margin-bottom: 1rem;
-    /* RESPONSIVE: Allow items to wrap if content is too long */
-    flex-wrap: wrap;
+  display: flex;
+  margin-bottom: 1rem;
+  /* RESPONSIVE: Allow items to wrap if content is too long */
+  flex-wrap: wrap;
 }
 
 .info-item span:first-child {
-    font-weight: 600;
-    min-width: 100px;
-    color: var(--text-dark);
-    /* RESPONSIVE: Ensure text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  font-weight: 600;
+  min-width: 100px;
+  color: var(--text-dark);
+  /* RESPONSIVE: Ensure text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .info-item span:last-child {
-    color: var(--gray-color);
-    /* RESPONSIVE: Ensure text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    flex: 1; /* Allow the second span to take remaining space */
+  color: var(--gray-color);
+  /* RESPONSIVE: Ensure text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  flex: 1; /* Allow the second span to take remaining space */
 }
 
 .skills-progress {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    background-color: var(--light-secondary);
-    border-radius: var(--border-radius);
-    padding: 2rem;
-    box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: var(--light-secondary);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .skill-item {
-    margin-bottom: 1.5rem;
-    /* RESPONSIVE: Ensure skill item takes full width */
-    width: 100%;
+  margin-bottom: 1.5rem;
+  /* RESPONSIVE: Ensure skill item takes full width */
+  width: 100%;
 }
 
 .skill-info {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.5rem;
-    /* RESPONSIVE: Ensure text wraps within skill info */
-    flex-wrap: wrap;
-    gap: 0.5rem; /* Add a small gap if they wrap */
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  /* RESPONSIVE: Ensure text wraps within skill info */
+  flex-wrap: wrap;
+  gap: 0.5rem; /* Add a small gap if they wrap */
 }
 
 .skill-info span:first-child {
-    font-weight: 600;
-    color: var(--text-dark);
-    /* RESPONSIVE: Ensure text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  font-weight: 600;
+  color: var(--text-dark);
+  /* RESPONSIVE: Ensure text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .skill-info span:last-child {
-    color: var(--gray-color);
-    /* RESPONSIVE: Ensure text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  color: var(--gray-color);
+  /* RESPONSIVE: Ensure text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .progress-bar {
-    height: 10px;
-    background-color: var(--light-color);
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+  height: 10px;
+  background-color: var(--light-color);
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .progress {
-    height: 100%;
-    background-color: var(--primary-dark);
-    border-radius: 5px;
-    transition: width 1s ease;
+  height: 100%;
+  background-color: var(--primary-dark);
+  border-radius: 5px;
+  transition: width 1s ease;
 }
 
 /* Stats Section */
 .stats-section {
-    padding: 5rem 0;
-    background-color: var(--accent-color-purple);
+  padding: 5rem 0;
+  background-color: var(--accent-color-purple);
 }
 
 .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-    /* RESPONSIVE: Ensure grid adapts to available space */
-    justify-items: center; /* Center items within their grid cells */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  /* RESPONSIVE: Ensure grid adapts to available space */
+  justify-items: center; /* Center items within their grid cells */
 }
 
 .stat-item {
-    padding: 2rem;
-    text-align: center;
-    transition: var(--transition);
-    background: var(--glass-bg);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border-radius: var(--border-radius);
-    border: var(--glass-border);
-    box-shadow: var(--shadow);
-    /* RESPONSIVE: Ensure stat item doesn't get too small */
-    width: 100%; /* Take full width of its minmax constraint */
-    max-width: 300px; /* Optional: cap max width for larger screens if needed */
+  padding: 2rem;
+  text-align: center;
+  transition: var(--transition);
+  background: var(--glass-bg);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: var(--border-radius);
+  border: var(--glass-border);
+  box-shadow: var(--shadow);
+  /* RESPONSIVE: Ensure stat item doesn't get too small */
+  width: 100%; /* Take full width of its minmax constraint */
+  max-width: 300px; /* Optional: cap max width for larger screens if needed */
 }
 
 .stat-item:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
-    border: var(--glass-border-hover);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border: var(--glass-border-hover);
 }
 
-
 .stat-number {
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-    /* RESPONSIVE: Ensure text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  /* RESPONSIVE: Ensure text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .stat-title {
-    font-size: 1.2rem;
-    color: var(--primary-dark);
-    /* RESPONSIVE: Ensure text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  font-size: 1.2rem;
+  color: var(--primary-dark);
+  /* RESPONSIVE: Ensure text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Services Preview */
 .services-section {
-    padding: 5rem 0;
-    background-color: var(--accent-color-blue);
+  padding: 5rem 0;
+  background-color: var(--accent-color-blue);
 }
 
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-    /* RESPONSIVE: Ensure grid adapts to available space */
-    justify-items: center; /* Center items within their grid cells */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  /* RESPONSIVE: Ensure grid adapts to available space */
+  justify-items: center; /* Center items within their grid cells */
 }
 
 .service-item {
-    padding: 2rem;
-    text-align: center;
-    background-color: var(--light-color);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-radius: var(--border-radius);
-    border: 2px solid rgba(255, 192, 203, 0.8);
-    box-shadow: 0 8px 25px rgba(255, 192, 203, 0.4);
-    transition: var(--transition);
-    /* RESPONSIVE: Ensure service item doesn't get too small */
-    width: 100%; /* Take full width of its minmax constraint */
-    max-width: 400px; /* Optional: cap max width for larger screens if needed */
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--light-color);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: var(--border-radius);
+  border: 2px solid rgba(255, 192, 203, 0.8);
+  box-shadow: 0 8px 25px rgba(255, 192, 203, 0.4);
+  transition: var(--transition);
+  /* RESPONSIVE: Ensure service item doesn't get too small */
+  width: 100%; /* Take full width of its minmax constraint */
+  max-width: 400px; /* Optional: cap max width for larger screens if needed */
 }
 
 .service-item:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 15px 40px rgba(173, 216, 230, 0.7);
-    border: 2px solid var(--accent-color-yellow);
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 40px rgba(173, 216, 230, 0.7);
+  border: 2px solid var(--accent-color-yellow);
 }
 
-
 .service-icon {
-    font-size: 3rem;
-    color: var(--text-dark);
-    margin-bottom: 1.5rem;
-    background: radial-gradient(circle at center, var(--primary-light) 0%, transparent 70%);
-    border-radius: 50%;
-    padding: 0.8rem;
-    box-shadow: 0 0 15px rgba(255, 192, 203, 0.5);
+  font-size: 3rem;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  background: radial-gradient(
+    circle at center,
+    var(--primary-light) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  padding: 0.8rem;
+  box-shadow: 0 0 15px rgba(255, 192, 203, 0.5);
 }
 
 .service-title {
-    font-size: 1.7rem;
-    margin-bottom: 1rem;
-    color: var(--primary-dark);
-    /* RESPONSIVE: Ensure text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  color: var(--primary-dark);
+  /* RESPONSIVE: Ensure text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .service-description {
-    margin-bottom: 1.5rem;
-    color: var(--gray-color);
-    /* RESPONSIVE: Ensure text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  margin-bottom: 1.5rem;
+  color: var(--gray-color);
+  /* RESPONSIVE: Ensure text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .service-link {
-    color: var( --accent-color-green);
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
+  color: var(--accent-color-green);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .service-link:hover {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .service-link i {
-    transition: var(--transition);
+  transition: var(--transition);
 }
 
 .service-link:hover i {
-    transform: translateX(5px);
+  transform: translateX(5px);
 }
 
 /* Responsive Styles */
 @media (max-width: 992px) {
-    .hero .container {
-        flex-direction: column;
-        text-align: center;
-    }
+  .hero .container {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    .hero-content {
-        margin-bottom: 3rem;
-        /* RESPONSIVE: Ensure text content takes full width on smaller screens */
-        width: 100%;
-        max-width: 600px; /* Limit max width for better readability */
-        margin-left: auto;
-        margin-right: auto;
-    }
+  .hero-content {
+    margin-bottom: 3rem;
+    /* RESPONSIVE: Ensure text content takes full width on smaller screens */
+    width: 100%;
+    max-width: 600px; /* Limit max width for better readability */
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    .hero-buttons {
-        justify-content: center;
-        /* RESPONSIVE: Allow buttons to stack if necessary */
-        flex-direction: row; /* Keep row for wider tablet views */
-        flex-wrap: wrap; /* Allow wrapping */
-    }
+  .hero-buttons {
+    justify-content: center;
+    /* RESPONSIVE: Allow buttons to stack if necessary */
+    flex-direction: row; /* Keep row for wider tablet views */
+    flex-wrap: wrap; /* Allow wrapping */
+  }
 
-    .hero-description {
-        margin: 0 auto 2rem;
-    }
+  .hero-description {
+    margin: 0 auto 2rem;
+  }
 
-    .hero-image {
-        order: -1; /* Move image above content on smaller screens */
-        margin-bottom: 3rem; /* Add space below image */
-        width: 100%; /* Ensure image container takes full width */
-        max-width: 400px; /* Keep consistent max-width for circular image */
-    }
+  .hero-image {
+    order: -1; /* Move image above content on smaller screens */
+    margin-bottom: 3rem; /* Add space below image */
+    width: 100%; /* Ensure image container takes full width */
+    max-width: 400px; /* Keep consistent max-width for circular image */
+  }
 
-    .about-content {
-        grid-template-columns: 1fr;
-        padding: 2rem;
-        /* RESPONSIVE: Center the about content within its container */
-        margin: 0 auto;
-        max-width: 600px; /* Limit width for better readability */
-    }
+  .about-content {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+    /* RESPONSIVE: Center the about content within its container */
+    margin: 0 auto;
+    max-width: 600px; /* Limit width for better readability */
+  }
 
-    .skills-progress {
-        padding: 1.5rem;
-    }
+  .skills-progress {
+    padding: 1.5rem;
+  }
 
-    .stats-grid {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Adjust minmax for smaller screens */
-    }
+  .stats-grid {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(180px, 1fr)
+    ); /* Adjust minmax for smaller screens */
+  }
 }
 
 @media (max-width: 768px) {
-    .hero {
-        padding: 10rem 0 3rem;
-    }
+  .hero {
+    padding: 10rem 0 3rem;
+  }
 
-    .hero-title {
-        font-size: 2.8rem;
-    }
+  .hero-title {
+    font-size: 2.8rem;
+  }
 
-    .hero-role {
-        font-size: 1.3rem;
-    }
+  .hero-role {
+    font-size: 1.3rem;
+  }
 
-    .hero-buttons {
-        flex-direction: column; /* Stack buttons vertically on mobile */
-        gap: 1rem;
-        width: 100%; /* Ensure buttons take full width */
-    }
+  .hero-buttons {
+    flex-direction: column; /* Stack buttons vertically on mobile */
+    gap: 1rem;
+    width: 100%; /* Ensure buttons take full width */
+  }
 
-    /* Make buttons full width on small screens */
-    .hero-buttons .btn {
-        width: 100%;
-        max-width: 300px; /* Limit individual button width */
-        margin: 0 auto; /* Center individual buttons */
-    }
+  /* Make buttons full width on small screens */
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 300px; /* Limit individual button width */
+    margin: 0 auto; /* Center individual buttons */
+  }
 
-    .stats-grid {
-        grid-template-columns: 1fr; /* Stack stats vertically on smaller mobile */
-    }
+  .stats-grid {
+    grid-template-columns: 1fr; /* Stack stats vertically on smaller mobile */
+  }
 
-    .stat-item {
-        max-width: 300px; /* Maintain a reasonable max-width for individual items */
-        margin: 0 auto; /* Center stat items when stacked */
-    }
+  .stat-item {
+    max-width: 300px; /* Maintain a reasonable max-width for individual items */
+    margin: 0 auto; /* Center stat items when stacked */
+  }
 
-    .services-grid {
-        grid-template-columns: 1fr; /* Stack services vertically on smaller mobile */
-    }
+  .services-grid {
+    grid-template-columns: 1fr; /* Stack services vertically on smaller mobile */
+  }
 
-    .service-item {
-        max-width: 350px; /* Maintain a reasonable max-width for individual items */
-        margin: 0 auto; /* Center service items when stacked */
-    }
+  .service-item {
+    max-width: 350px; /* Maintain a reasonable max-width for individual items */
+    margin: 0 auto; /* Center service items when stacked */
+  }
 }
 
 @media (max-width: 576px) {
-    .hero-title {
-        font-size: 2.2rem;
-    }
+  .hero-title {
+    font-size: 2.2rem;
+  }
 
-    .hero-role {
-        font-size: 1.1rem;
-    }
+  .hero-role {
+    font-size: 1.1rem;
+  }
 
-    .hero-description {
-        font-size: 1rem;
-    }
+  .hero-description {
+    font-size: 1rem;
+  }
 
-    .about-content {
-        padding: 1.5rem; /* Further reduce padding for very small screens */
-    }
+  .about-content {
+    padding: 1.5rem; /* Further reduce padding for very small screens */
+  }
 
-    .skills-progress {
-        padding: 1rem; /* Further reduce padding for very small screens */
-    }
+  .skills-progress {
+    padding: 1rem; /* Further reduce padding for very small screens */
+  }
 
-    /* Ensure text in skill info doesn't overflow */
-    .skill-info span:first-child,
-    .skill-info span:last-child {
-        font-size: 0.95rem; /* Slightly smaller font for tighter fit */
-    }
+  /* Ensure text in skill info doesn't overflow */
+  .skill-info span:first-child,
+  .skill-info span:last-child {
+    font-size: 0.95rem; /* Slightly smaller font for tighter fit */
+  }
 
-    .stat-number {
-        font-size: 2.5rem; /* Adjust font size for smaller screens */
-    }
+  .stat-number {
+    font-size: 2.5rem; /* Adjust font size for smaller screens */
+  }
 
-    .stat-title {
-        font-size: 1rem; /* Adjust font size for smaller screens */
-    }
+  .stat-title {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
 
-    .service-title {
-        font-size: 1.5rem; /* Adjust font size for smaller screens */
-    }
+  .service-title {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
 
-    .service-description {
-        font-size: 0.95rem; /* Adjust font size for smaller screens */
-    }
+  .service-description {
+    font-size: 0.95rem; /* Adjust font size for smaller screens */
+  }
 }
 
 /* Very small mobile devices (e.g., iPhone SE portrait) */
 @media (max-width: 375px) {
-    .hero {
-        padding: 8rem 0 2rem; /* Even less padding on very small screens */
-    }
+  .hero {
+    padding: 8rem 0 2rem; /* Even less padding on very small screens */
+  }
 
-    .hero-title {
-        font-size: 1.8rem;
-    }
+  .hero-title {
+    font-size: 1.8rem;
+  }
 
-    .hero-role {
-        font-size: 1rem;
-    }
+  .hero-role {
+    font-size: 1rem;
+  }
 
-    .hero-description {
-        font-size: 0.9rem;
-    }
+  .hero-description {
+    font-size: 0.9rem;
+  }
 
-    .image-wrapper {
-        max-width: 250px; /* Make image slightly smaller on very small screens */
-    }
+  .image-wrapper {
+    max-width: 250px; /* Make image slightly smaller on very small screens */
+  }
 
-    .about-content {
-        padding: 1rem; /* Minimum padding */
-    }
+  .about-content {
+    padding: 1rem; /* Minimum padding */
+  }
 
-    .skills-progress {
-        padding: 0.8rem;
-    }
+  .skills-progress {
+    padding: 0.8rem;
+  }
 
-    .stat-item,
-    .service-item {
-        padding: 1.5rem; /* Reduce padding for items */
-    }
+  .stat-item,
+  .service-item {
+    padding: 1.5rem; /* Reduce padding for items */
+  }
 
-    .stat-number {
-        font-size: 2rem;
-    }
+  .stat-number {
+    font-size: 2rem;
+  }
 
-    .service-icon {
-        font-size: 2.5rem; /* Smaller icon */
-    }
-    
-    .service-title {
-        font-size: 1.3rem; /* Smaller title */
-    }
+  .service-icon {
+    font-size: 2.5rem; /* Smaller icon */
+  }
+
+  .service-title {
+    font-size: 1.3rem; /* Smaller title */
+  }
 }

@@ -1,389 +1,418 @@
 /* Contact Hero */
 .contact-hero {
-    padding: 10rem 0 3rem;
-    text-align: center;
-    background-color: var(--light-color); /* Very subtle, almost white */
+  padding: 10rem 0 3rem;
+  text-align: center;
+  background-color: var(--light-color); /* Very subtle, almost white */
 }
 
 .contact-hero .section-title {
-    color: var(--text-dark);
-    /* RESPONSIVE: Ensure title text wraps on smaller screens */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  color: var(--text-dark);
+  /* RESPONSIVE: Ensure title text wraps on smaller screens */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .contact-hero .section-title::after {
-    background-color: var(--primary-color);
+  background-color: var(--primary-color);
 }
 
 /* Contact Cards Section */
 .contact-cards {
-    padding: 3rem 0;
-    background-color: var(--light-secondary); /* A light, subtle off-white */
+  padding: 3rem 0;
+  background-color: var(--light-secondary); /* A light, subtle off-white */
 }
 
 .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    /* RESPONSIVE: Center grid items */
-    justify-items: center;
-    /* RESPONSIVE: Add horizontal padding to prevent cards from touching screen edges */
-    padding-left: 1rem;
-    padding-right: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  /* RESPONSIVE: Center grid items */
+  justify-items: center;
+  /* RESPONSIVE: Add horizontal padding to prevent cards from touching screen edges */
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .contact-card {
-    padding: 2rem;
-    text-align: center;
-    transition: var(--transition);
-    background: var(--light-color);
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    border: var(--glass-border); /* Subtle border for definition */
-    /* RESPONSIVE: Ensure cards take full width of their minmax constraint and limit max width */
-    width: 100%;
-    max-width: 350px; /* Limit max width for readability on larger screens */
-    box-sizing: border-box; /* Include padding in the width calculation */
+  padding: 2rem;
+  text-align: center;
+  transition: var(--transition);
+  background: var(--light-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  border: var(--glass-border); /* Subtle border for definition */
+  /* RESPONSIVE: Ensure cards take full width of their minmax constraint and limit max width */
+  width: 100%;
+  max-width: 350px; /* Limit max width for readability on larger screens */
+  box-sizing: border-box; /* Include padding in the width calculation */
 }
 
 .contact-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover); /* Enhanced shadow on hover */
-    border: var(--glass-border-hover); /* Subtle border change on hover */
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover); /* Enhanced shadow on hover */
+  border: var(--glass-border-hover); /* Subtle border change on hover */
 }
 
 .card-icon {
-    width: 60px;
-    height: 60px;
-    background-color: rgba(var(--primary-color-rgb), 0.1); /* Light transparent pink */
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1.5rem;
-    font-size: 1.5rem;
-    color: var(--primary-color);
-    /* RESPONSIVE: Ensure icon container doesn't affect layout negatively */
-    flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(
+    var(--primary-color-rgb),
+    0.1
+  ); /* Light transparent pink */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  /* RESPONSIVE: Ensure icon container doesn't affect layout negatively */
+  flex-shrink: 0;
 }
 
 .contact-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-    color: var(--text-dark);
-    /* RESPONSIVE: Ensure heading text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+  /* RESPONSIVE: Ensure heading text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .card-link {
-    color: var(--gray-color);
-    transition: var(--transition);
-    /* RESPONSIVE: Ensure link text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    display: inline-block; /* Allows padding and margin, helps with wrapping */
+  color: var(--gray-color);
+  transition: var(--transition);
+  /* RESPONSIVE: Ensure link text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  display: inline-block; /* Allows padding and margin, helps with wrapping */
 }
 
 .card-link:hover {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
-    /* RESPONSIVE: Ensure social icons don't overflow */
-    flex-wrap: wrap; /* Allow icons to wrap if space is limited */
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  /* RESPONSIVE: Ensure social icons don't overflow */
+  flex-wrap: wrap; /* Allow icons to wrap if space is limited */
 }
 
 .social-icon {
-    width: 40px;
-    height: 40px;
-    background-color: rgba(var(--accent-color-blue-rgb), 0.1); /* Light transparent blue */
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--primary-color);
-    transition: var(--transition);
-    flex-shrink: 0; /* Prevent icons from shrinking */
+  width: 40px;
+  height: 40px;
+  background-color: rgba(
+    var(--accent-color-blue-rgb),
+    0.1
+  ); /* Light transparent blue */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  transition: var(--transition);
+  flex-shrink: 0; /* Prevent icons from shrinking */
 }
 
 .social-icon:hover {
-    background-color: var(--primary-color); /* Solid primary on hover */
-    color: var(--light-color); /* White text on hover */
+  background-color: var(--primary-color); /* Solid primary on hover */
+  color: var(--light-color); /* White text on hover */
 }
 
 /* Form Section */
 .form-section {
-    padding: 3rem 0 5rem;
-    background-color: var(--primary-light); /* Lightest pink */
-    /* RESPONSIVE: Add horizontal padding to ensure content fits */
-    padding-left: 1rem;
-    padding-right: 1rem;
+  padding: 3rem 0 5rem;
+  background-color: var(--primary-light); /* Lightest pink */
+  /* RESPONSIVE: Add horizontal padding to ensure content fits */
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .form-container {
-    padding: 2rem;
-    border-radius: var(--border-radius);
-    background: var(--light-color);
-    box-shadow: var(--shadow);
-    border: var(--glass-border); /* Subtle border for definition */
-    /* RESPONSIVE: Limit max width and center the form container */
-    max-width: 800px;
-    margin: 0 auto;
-    box-sizing: border-box; /* Include padding in the width calculation */
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  background: var(--light-color);
+  box-shadow: var(--shadow);
+  border: var(--glass-border); /* Subtle border for definition */
+  /* RESPONSIVE: Limit max width and center the form container */
+  max-width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box; /* Include padding in the width calculation */
 }
 
 .form-container .section-title {
-    text-align: center;
-    margin-bottom: 2rem;
-    /* RESPONSIVE: Ensure title text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  text-align: center;
+  margin-bottom: 2rem;
+  /* RESPONSIVE: Ensure title text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .form-container iframe {
-    border: none;
-    min-height: 1342px; /* Keep original min-height, but allow flexibility */
-    /* RESPONSIVE: Make iframe responsive */
-    width: 100%;
-    height: auto; /* Let height adjust based on content if possible, or adjust min-height with media queries */
-    display: block; /* Remove any extra space below iframe */
+  border: none;
+  min-height: 1342px; /* Keep original min-height, but allow flexibility */
+  /* RESPONSIVE: Make iframe responsive */
+  width: 100%;
+  height: auto; /* Let height adjust based on content if possible, or adjust min-height with media queries */
+  display: block; /* Remove any extra space below iframe */
 }
 
 /* Footer */
 .footer {
-    background-color: var(--dark-secondary); /* Retained: Dark background */
-    color: var(--text-light); /* Retained: Light text */
-    padding: 4rem 0 2rem;
-    /* RESPONSIVE: Add horizontal padding */
-    padding-left: 1rem;
-    padding-right: 1rem;
+  background-color: var(--dark-secondary); /* Retained: Dark background */
+  color: var(--text-light); /* Retained: Light text */
+  padding: 4rem 0 2rem;
+  /* RESPONSIVE: Add horizontal padding */
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .footer-content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
-    margin-bottom: 3rem;
-    /* RESPONSIVE: Adjust for responsiveness as per original code, ensuring centering */
-    justify-items: center; /* Center items in their grid cells */
-    text-align: center; /* Align text within columns */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-bottom: 3rem;
+  /* RESPONSIVE: Adjust for responsiveness as per original code, ensuring centering */
+  justify-items: center; /* Center items in their grid cells */
+  text-align: center; /* Align text within columns */
 }
 
 .footer-brand {
-    /* RESPONSIVE: Ensure text wraps within brand info */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  /* RESPONSIVE: Ensure text wraps within brand info */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .footer-brand h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: var(--text-light);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-light);
 }
 
 .footer-brand p {
-    color: rgba(255, 255, 255, 0.7); /* Retained: Semi-transparent white for body text */
+  color: rgba(
+    255,
+    255,
+    255,
+    0.7
+  ); /* Retained: Semi-transparent white for body text */
 }
 
 .footer-nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: center;
-    /* RESPONSIVE: Ensure nav links wrap and align */
-    padding: 0; /* Remove default ul padding */
-    list-style: none; /* Remove bullet points */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  /* RESPONSIVE: Ensure nav links wrap and align */
+  padding: 0; /* Remove default ul padding */
+  list-style: none; /* Remove bullet points */
 }
 
 .footer-nav ul li a {
-    color: rgba(255, 255, 255, 0.7); /* Retained: Semi-transparent white for links */
-    transition: var(--transition);
-    /* RESPONSIVE: Ensure link text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  color: rgba(
+    255,
+    255,
+    255,
+    0.7
+  ); /* Retained: Semi-transparent white for links */
+  transition: var(--transition);
+  /* RESPONSIVE: Ensure link text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .footer-nav ul li a:hover {
-    color: var(--primary-light); /* Retained: Primary light on hover */
+  color: var(--primary-light); /* Retained: Primary light on hover */
 }
 
 .footer-social {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: flex-end;
-    /* RESPONSIVE: Ensure social icons align properly */
-    justify-content: center; /* Center them by default for better responsiveness */
-    flex-wrap: wrap; /* Allow icons to wrap if space is limited */
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-end;
+  /* RESPONSIVE: Ensure social icons align properly */
+  justify-content: center; /* Center them by default for better responsiveness */
+  flex-wrap: wrap; /* Allow icons to wrap if space is limited */
 }
 
 .footer-social a {
-    color: rgba(255, 255, 255, 0.7); /* Retained: Semi-transparent white for icons */
-    font-size: 1.5rem;
-    transition: var(--transition);
-    flex-shrink: 0; /* Prevent icons from shrinking */
+  color: rgba(
+    255,
+    255,
+    255,
+    0.7
+  ); /* Retained: Semi-transparent white for icons */
+  font-size: 1.5rem;
+  transition: var(--transition);
+  flex-shrink: 0; /* Prevent icons from shrinking */
 }
 
 .footer-social a:hover {
-    color: var(--primary-light); /* Retained: Primary light on hover */
-    transform: translateY(-3px);
+  color: var(--primary-light); /* Retained: Primary light on hover */
+  transform: translateY(-3px);
 }
 
 .footer-bottom {
-    text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Retained: Subtle white border */
-    color: rgba(255, 255, 255, 0.7); /* Retained: Semi-transparent white for copyright */
-    font-size: 0.9rem;
-    /* RESPONSIVE: Ensure text wraps */
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Retained: Subtle white border */
+  color: rgba(
+    255,
+    255,
+    255,
+    0.7
+  ); /* Retained: Semi-transparent white for copyright */
+  font-size: 0.9rem;
+  /* RESPONSIVE: Ensure text wraps */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Responsive Styles */
 @media (max-width: 992px) {
-    .footer-content {
-        grid-template-columns: 1fr; /* Stack columns vertically */
-        text-align: center;
-        gap: 2rem;
-    }
-    
-    .footer-brand,
-    .footer-nav,
-    .footer-social {
-        width: 100%; /* Ensure they take full width when stacked */
-    }
+  .footer-content {
+    grid-template-columns: 1fr; /* Stack columns vertically */
+    text-align: center;
+    gap: 2rem;
+  }
 
-    .footer-nav ul {
-        justify-content: center;
-    }
-    
-    .footer-social {
-        justify-content: center;
-    }
+  .footer-brand,
+  .footer-nav,
+  .footer-social {
+    width: 100%; /* Ensure they take full width when stacked */
+  }
+
+  .footer-nav ul {
+    justify-content: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 768px) {
-    .contact-hero {
-        padding: 8rem 0 2rem;
-    }
-    
-    .cards-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Allow smaller cards or stack 2 per row */
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-    }
+  .contact-hero {
+    padding: 8rem 0 2rem;
+  }
 
-    .contact-card {
-        max-width: 300px; /* Adjust max width for smaller screens */
-    }
+  .cards-grid {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(200px, 1fr)
+    ); /* Allow smaller cards or stack 2 per row */
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 
-    .form-section {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-    }
+  .contact-card {
+    max-width: 300px; /* Adjust max width for smaller screens */
+  }
 
-    /* Adjust iframe height for smaller screens if it becomes too long */
-    .form-container iframe {
-        min-height: 1000px; /* Example: Reduce min-height for tablets */
-    }
+  .form-section {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 
-    .footer {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-    }
+  /* Adjust iframe height for smaller screens if it becomes too long */
+  .form-container iframe {
+    min-height: 1000px; /* Example: Reduce min-height for tablets */
+  }
+
+  .footer {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 }
 
 @media (max-width: 576px) {
-    .cards-grid {
-        grid-template-columns: 1fr; /* Stack contact cards vertically on small phones */
-    }
+  .cards-grid {
+    grid-template-columns: 1fr; /* Stack contact cards vertically on small phones */
+  }
 
-    .contact-card {
-        margin: 0 auto; /* Center individual cards when stacked */
-        max-width: 280px; /* Even smaller max width for very small phones */
-    }
-    
-    .footer-nav ul {
-        flex-direction: column; /* Stack navigation links vertically */
-        align-items: center; /* Center aligned */
-        gap: 1rem;
-    }
+  .contact-card {
+    margin: 0 auto; /* Center individual cards when stacked */
+    max-width: 280px; /* Even smaller max width for very small phones */
+  }
 
-    /* Further reduce iframe height for very small screens */
-    .form-container iframe {
-        min-height: 800px; /* Example: Further reduce min-height for phones */
-    }
+  .footer-nav ul {
+    flex-direction: column; /* Stack navigation links vertically */
+    align-items: center; /* Center aligned */
+    gap: 1rem;
+  }
+
+  /* Further reduce iframe height for very small screens */
+  .form-container iframe {
+    min-height: 800px; /* Example: Further reduce min-height for phones */
+  }
 }
 
 /* Specific adjustments for very small mobile devices like iPhone SE (375px width) */
 @media (max-width: 375px) {
-    .contact-hero {
-        padding: 6rem 0 1.5rem;
-    }
+  .contact-hero {
+    padding: 6rem 0 1.5rem;
+  }
 
-    .cards-grid {
-        padding-left: 0.2rem;
-        padding-right: 0.2rem;
-    }
+  .cards-grid {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+  }
 
-    .contact-card {
-        padding: 1.5rem; /* Reduce card padding */
-        max-width: 250px; /* Smallest max width */
-    }
+  .contact-card {
+    padding: 1.5rem; /* Reduce card padding */
+    max-width: 250px; /* Smallest max width */
+  }
 
-    .contact-card h3 {
-        font-size: 1.1rem; /* Smaller heading font size */
-    }
+  .contact-card h3 {
+    font-size: 1.1rem; /* Smaller heading font size */
+  }
 
-    .card-link {
-        font-size: 0.9rem; /* Smaller link font size */
-    }
+  .card-link {
+    font-size: 0.9rem; /* Smaller link font size */
+  }
 
-    .social-icon {
-        width: 35px; /* Smaller social icons */
-        height: 35px;
-        font-size: 1.3rem;
-    }
+  .social-icon {
+    width: 35px; /* Smaller social icons */
+    height: 35px;
+    font-size: 1.3rem;
+  }
 
-    .form-section {
-        padding-left: 0.2rem;
-        padding-right: 0.2rem;
-    }
+  .form-section {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+  }
 
-    .form-container {
-        padding: 1.5rem; /* Reduce form container padding */
-    }
+  .form-container {
+    padding: 1.5rem; /* Reduce form container padding */
+  }
 
-    .form-container iframe {
-        min-height: 700px; /* Even smaller min-height for tiny screens */
-    }
+  .form-container iframe {
+    min-height: 700px; /* Even smaller min-height for tiny screens */
+  }
 
-    .footer {
-        padding-left: 0.2rem;
-        padding-right: 0.2rem;
-        padding-top: 3rem; /* Adjust footer padding */
-    }
+  .footer {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    padding-top: 3rem; /* Adjust footer padding */
+  }
 
-    .footer-brand h3 {
-        font-size: 1.3rem;
-    }
+  .footer-brand h3 {
+    font-size: 1.3rem;
+  }
 
-    .footer-brand p,
-    .footer-bottom {
-        font-size: 0.8rem;
-    }
+  .footer-brand p,
+  .footer-bottom {
+    font-size: 0.8rem;
+  }
 
-    .footer-nav ul li a {
-        font-size: 0.9rem;
-    }
+  .footer-nav ul li a {
+    font-size: 0.9rem;
+  }
 
-    .footer-social a {
-        font-size: 1.3rem;
-    }
+  .footer-social a {
+    font-size: 1.3rem;
+  }
 }
