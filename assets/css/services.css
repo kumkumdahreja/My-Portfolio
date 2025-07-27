@@ -93,6 +93,8 @@
 .service-features {
   text-align: left;
   margin-bottom: 1.5rem;
+  list-style: none; /* Ensure no default bullets */
+  padding-left: 0; /* Remove default padding */
 }
 
 .service-features li {
@@ -111,6 +113,34 @@
   font-weight: bold;
   position: absolute;
   left: 0;
+}
+
+/* New: Style for the Graphic Design View Portfolio button */
+.view-portfolio-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color); /* Your primary button color */
+    color: var(--text-light); /* White text */
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem; /* Space from description/features */
+}
+
+.view-portfolio-btn:hover {
+    background-color: var(--accent-color-blue); /* A different accent color on hover */
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.view-portfolio-btn i {
+    font-size: 1rem;
+    color: var(--text-light);
 }
 
 /* Brand Collaboration */
@@ -596,6 +626,7 @@
   .social-platforms a {
     max-width: 200px; /* Further restrict max-width for social buttons */
     font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;
   }
 }
 

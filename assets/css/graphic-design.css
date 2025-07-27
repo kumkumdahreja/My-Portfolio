@@ -1,0 +1,396 @@
+/* graphic-design.css */
+
+/* Graphic Design Hero Section */
+.graphic-design-hero {
+    padding: 10rem 0 5rem;
+    text-align: center;
+    background-color: var(--primary-color); /* Matches services hero background */
+}
+
+.graphic-design-hero .section-title {
+    color: var(--text-dark); /* Dark text for title readability on green */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.graphic-design-hero .section-title::after {
+    background-color: var(--primary-color); /* Underline with vibrant pink */
+}
+
+/* Graphic Design Content Section (Portfolio Grid) */
+.graphic-design-content { /* Renamed from .graphic-design-categories for broader scope */
+    padding: 5rem 0;
+    background-color: var(--light-color); /* Clean white background */
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    justify-items: center;
+}
+
+.portfolio-card {
+    padding: 2rem;
+    text-align: center;
+    background: var(--glass-bg);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border: 1px solid var(--glass-border-hover);
+}
+
+.portfolio-icon {
+    font-size: 2.8rem;
+    color: var(--accent-color-purple);
+    margin-bottom: 1.5rem;
+    background: radial-gradient(
+        circle at center,
+        rgba(224, 187, 228, 0.2) 0%,
+        transparent 70%
+    );
+    padding: 0.5rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.portfolio-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.portfolio-description {
+    margin-bottom: 1.5rem;
+    color: var(--gray-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.portfolio-features {
+    text-align: left;
+    margin-bottom: 1.5rem;
+    list-style: none;
+    padding-left: 0;
+}
+
+.portfolio-features li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+    color: var(--gray-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.portfolio-features li::before {
+    content: "•";
+    color: var(--accent-color-orange);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.download-btn:hover {
+    background-color: var(--accent-color-blue);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.download-btn i {
+    font-size: 1rem;
+    color: var(--text-light);
+}
+
+
+/* NEW: Styles for the "Pages I Managed" card and its links */
+.pages-managed-card {
+    /* Inherits general .portfolio-card styles */
+    display: flex; /* Use flexbox for inner layout */
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Similar to your .types-grid */
+    gap: 1rem;
+    margin-top: 1.5rem;
+    width: 100%; /* Take full width of its parent */
+    justify-items: center;
+}
+
+.page-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    gap: 0.5rem;
+    padding: 0.8rem;
+    background-color: var(--accent-color-blue); /* A soft background for the circles */
+    color: var(--text-dark);
+    border-radius: 50%; /* Make it a circle */
+    width: 100px; /* Fixed width for circle */
+    height: 100px; /* Fixed height for circle */
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    text-align: center;
+    box-sizing: border-box; /* Include padding in dimensions */
+}
+
+/* Alternate colors for variety in circles */
+.page-item:nth-child(2n) {
+    background-color: var(--accent-color-yellow);
+}
+.page-item:nth-child(3n) {
+    background-color: var(--accent-color-purple);
+}
+/* Add more as needed if you have more than 3 */
+
+.page-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+    background-color: var(--primary-color); /* Hover effect */
+    color: var(--text-light);
+}
+
+.page-item i {
+    font-size: 2rem; /* Larger icon inside the circle */
+    color: var(--primary-color); /* Icon color */
+    transition: var(--transition);
+}
+
+.page-item:hover i {
+    color: var(--text-light); /* Icon color on hover */
+}
+
+.page-item span {
+    font-size: 0.8rem; /* Smaller text for the name */
+    line-height: 1.2;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Responsive Styles for Graphic Design Page */
+@media (max-width: 992px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .portfolio-card {
+        max-width: 350px;
+        padding: 1.5rem;
+    }
+
+    .portfolio-title {
+        font-size: 1.4rem;
+    }
+
+    .portfolio-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .portfolio-description {
+        font-size: 0.95rem;
+    }
+
+    .portfolio-features li {
+        font-size: 0.95rem;
+    }
+
+    .page-item {
+        width: 90px;
+        height: 90px;
+        padding: 0.7rem;
+    }
+    .page-item i {
+        font-size: 1.8rem;
+    }
+    .page-item span {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .graphic-design-hero {
+        padding: 8rem 0 3rem;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .portfolio-card {
+        max-width: 350px;
+        padding: 1.5rem;
+    }
+
+    .portfolio-title {
+        font-size: 1.4rem;
+    }
+
+    .portfolio-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .portfolio-description {
+        font-size: 0.95rem;
+    }
+
+    .portfolio-features li {
+        font-size: 0.95rem;
+    }
+
+    .page-item {
+        width: 80px;
+        height: 80px;
+        padding: 0.6rem;
+    }
+    .page-item i {
+        font-size: 1.6rem;
+    }
+    .page-item span {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .graphic-design-hero {
+        padding: 6rem 0 2rem;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        padding-left: 0.2rem;
+        padding-right: 0.2rem;
+    }
+
+    .portfolio-card {
+        margin: 0 auto;
+        max-width: 300px;
+        padding: 1.2rem;
+    }
+
+    .portfolio-icon {
+        font-size: 2.2rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .portfolio-title {
+        font-size: 1.2rem;
+    }
+
+    .portfolio-description {
+        font-size: 0.9rem;
+    }
+
+    .portfolio-features li {
+        font-size: 0.88rem;
+    }
+
+    .page-links-grid {
+        grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+        gap: 0.8rem;
+    }
+
+    .page-item {
+        width: 70px;
+        height: 70px;
+        padding: 0.5rem;
+    }
+    .page-item i {
+        font-size: 1.4rem;
+    }
+    .page-item span {
+        font-size: 0.65rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .graphic-design-hero {
+        padding: 5rem 0 1.5rem;
+    }
+
+    .portfolio-grid {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .portfolio-card {
+        max-width: 280px;
+        padding: 1rem;
+    }
+
+    .portfolio-icon {
+        font-size: 2rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .portfolio-title {
+        font-size: 1.1rem;
+    }
+
+    .portfolio-description {
+        font-size: 0.85rem;
+    }
+
+    .portfolio-features li {
+        font-size: 0.8rem;
+    }
+
+    .page-links-grid {
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+        gap: 0.6rem;
+    }
+    .page-item {
+        width: 60px;
+        height: 60px;
+        padding: 0.4rem;
+    }
+    .page-item i {
+        font-size: 1.2rem;
+    }
+    .page-item span {
+        font-size: 0.6rem;
+    }
+}

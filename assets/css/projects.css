@@ -98,6 +98,16 @@
   width: 100%;
   max-width: 400px; /* Limit max width for readability on larger screens */
   box-sizing: border-box; /* Include padding in the width calculation */
+  /* Animation properties */
+  opacity: 0; /* Start hidden for animation */
+  transform: translateY(20px); /* Start slightly below for animation */
+  animation: fadeInRise 0.5s ease-out forwards; /* Apply animation */
+}
+
+/* This will be controlled by JS for staggered animation */
+.portfolio-item.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .portfolio-card {
@@ -204,6 +214,16 @@
 .portfolio-tags span:nth-child(5n) {
   background-color: var(--accent-color-orange); /* Peach/Orange tag */
 }
+/* New tag for "Under Development" */
+.portfolio-tags span:contains("Under Development") {
+  background-color: var(--warning-color); /* Use warning color for "Under Development" */
+  color: var(--dark-color);
+}
+/* New tag for "Figma" designs */
+.portfolio-tags span:contains("Figma") {
+  background-color: #f24e1e; /* Figma orange */
+  color: var(--text-light);
+}
 
 .portfolio-link {
   color: var(--primary-color); /* Link color in vibrant pink */
@@ -228,6 +248,18 @@
   transform: translateX(5px);
 }
 
+/* Keyframe for fadeInRise animation */
+@keyframes fadeInRise {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Responsive Styles */
 @media (max-width: 992px) {
   /* No specific changes here, general flex/grid handling suffices */
@@ -246,6 +278,8 @@
     padding: 0.5rem 1.2rem; /* Adjust padding for smaller buttons */
     font-size: 0.9rem;
     white-space: normal; /* Allow text to wrap within buttons if necessary */
+    /* Make buttons slightly more flexible on smaller screens */
+    flex-basis: auto; /* Allow buttons to size based on content */
   }
 
   .portfolio-grid {
