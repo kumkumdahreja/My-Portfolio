@@ -155,7 +155,7 @@
 .collaboration-content {
   display: flex;
   align-items: center;
-  padding: 2rem;
+  padding: 3rem;
   gap: 3rem;
   background: var(--glass-bg); /* Nearly opaque white for clarity */
   backdrop-filter: blur(5px);
@@ -341,48 +341,78 @@
   color: var(--text-light); /* Icon becomes white on hover */
 }
 
-.collab-image {
+/* NEW: Collaboration Icon Grid */
+.collab-icons {
   flex: 1;
-  position: relative;
-  padding: 1.5rem; /* Padding to create space for the decorative border */
-  background-color: var(
-    --accent-color-yellow
-  ); /* Solid vibrant yellow border effect */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 400px;
+}
+
+.collab-icon-item {
+  background: linear-gradient(135deg, var(--glass-bg), rgba(255, 255, 255, 0.1));
   border-radius: var(--border-radius);
-  box-shadow: var(--shadow-hover); /* More prominent shadow for the image */
-  /* RESPONSIVE: Ensure image container scales and has a max width */
-  max-width: 500px; /* Limit max width for the image container */
-  margin: 0 auto; /* Center image container when stacked */
-  box-sizing: border-box; /* Include padding in the width */
+  padding: 1.5rem;
+  text-align: center;
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
 }
 
-.collab-image::before {
-  /* Decorative inner border/frame */
-  content: "";
-  position: absolute;
-  inset: 5px; /* Controls the thickness of the inner border */
-  background: var(--light-color); /* White background inside the frame */
-  border-radius: calc(
-    var(--border-radius) - 5px
-  ); /* Slightly smaller inner border radius */
-  z-index: 1;
+.collab-icon-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--glass-border-hover);
 }
 
-.collab-image img {
-  width: 100%;
-  height: 350px; /* Fixed height for consistency */
-  object-fit: cover; /* Ensures image covers the area nicely */
-  border-radius: calc(
-    var(--border-radius) - 5px
-  ); /* Match inner border radius */
-  position: relative;
-  z-index: 2; /* Ensures image is on top of the 'before' pseudo-element */
-  display: block; /* Remove extra space below image */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Soft shadow on the image itself */
-  /* RESPONSIVE: Make image height more flexible */
-  height: auto;
-  min-height: 200px; /* Minimum height for image */
-  max-height: 350px; /* Max height to maintain proportion */
+.collab-icon-item i {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  background: radial-gradient(circle at center, rgba(255, 105, 180, 0.15), transparent 70%);
+  padding: 0.8rem;
+  border-radius: 50%;
+}
+
+.collab-icon-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.collab-icon-desc {
+  font-size: 0.85rem;
+  color: var(--gray-color);
+  line-height: 1.4;
+}
+
+/* NEW: Collaboration Stats */
+.collab-stats {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--glass-border);
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.3rem;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--gray-color);
+  font-weight: 500;
 }
 
 /* Responsive Styles */
@@ -390,19 +420,15 @@
   .collaboration-content {
     flex-direction: column; /* Stack collaboration content vertically */
     gap: 2rem; /* Reduce gap when stacked */
-    padding: 1.5rem; /* Adjust padding */
+    padding: 2rem; /* Adjust padding */
   }
 
-  .collab-image {
-    order: -1; /* Move image above text on smaller screens */
+  .collab-icons {
+    order: -1; /* Move icons above text on smaller screens */
     margin-bottom: 2rem;
-    width: 100%; /* Ensure image takes full width */
-    max-width: 450px; /* Adjust max-width for image when stacked */
-  }
-
-  .collab-image img {
-    height: auto; /* Allow height to adjust naturally */
-    max-height: 300px; /* Reduce max height for tablets */
+    width: 100%; /* Ensure icons take full width */
+    max-width: 500px; /* Adjust max-width for icons when stacked */
+    margin: 0 auto 2rem;
   }
 
   .collab-text {
@@ -464,7 +490,7 @@
   }
 
   .collaboration-content {
-    padding: 1.2rem; /* Reduce padding for collaboration content */
+    padding: 1.5rem; /* Reduce padding for collaboration content */
     gap: 1.5rem; /* Reduce gap */
   }
 
@@ -504,6 +530,32 @@
 
   .type-item span {
     font-size: 0.85rem;
+  }
+
+  .collab-icons {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .collab-icon-item {
+    padding: 1.2rem;
+  }
+
+  .collab-icon-item i {
+    font-size: 2rem;
+  }
+
+  .collab-icon-title {
+    font-size: 0.95rem;
+  }
+
+  .collab-icon-desc {
+    font-size: 0.8rem;
+  }
+
+  .collab-stats {
+    flex-wrap: wrap;
+    gap: 1.5rem;
   }
 
   .social-platforms {
@@ -565,24 +617,22 @@
   }
 
   .collaboration-content {
-    padding: 1rem; /* Further reduce padding for collaboration content */
+    padding: 1.2rem; /* Further reduce padding for collaboration content */
     gap: 1rem; /* Further reduce gap */
   }
 
-  .collab-image {
-    max-width: 300px; /* Even smaller max width for image when stacked */
-    margin-bottom: 1.5rem;
-    padding: 1rem; /* Reduce padding around the image frame */
+  .collab-icons {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+    gap: 1rem;
   }
 
-  .collab-image::before {
-    inset: 3px; /* Smaller inner border thickness */
-    border-radius: calc(var(--border-radius) - 3px);
+  .collab-icon-item {
+    padding: 1rem;
   }
 
-  .collab-image img {
-    max-height: 250px; /* Further reduce max height for very small screens */
-    border-radius: calc(var(--border-radius) - 3px);
+  .collab-icon-item i {
+    font-size: 1.8rem;
   }
 
   .collab-text h3 {
@@ -620,6 +670,19 @@
   }
 
   .type-item span {
+    font-size: 0.75rem;
+  }
+
+  .collab-stats {
+    gap: 1rem;
+    padding-top: 1.5rem;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
+  .stat-label {
     font-size: 0.75rem;
   }
 
@@ -669,23 +732,11 @@
   }
 
   .collaboration-content {
-    padding: 0.8rem;
+    padding: 1rem;
   }
 
-  .collab-image {
+  .collab-icons {
     max-width: 280px;
-    margin-bottom: 1rem;
-    padding: 0.8rem;
-  }
-
-  .collab-image::before {
-    inset: 2px;
-    border-radius: calc(var(--border-radius) - 2px);
-  }
-
-  .collab-image img {
-    max-height: 200px;
-    border-radius: calc(var(--border-radius) - 2px);
   }
 
   .collab-text h3 {
@@ -721,6 +772,21 @@
 
   .type-item span {
     font-size: 0.7rem;
+  }
+
+  .collab-stats {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem;
+    background: var(--glass-bg);
+    border-radius: var(--border-radius);
   }
 
   .social-platforms a {
